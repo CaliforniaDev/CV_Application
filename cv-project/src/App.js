@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import CvForm from "./components/CvForm";
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <CvForm />
       </div>
     )
   }
