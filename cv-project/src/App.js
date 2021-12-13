@@ -1,10 +1,17 @@
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      test: "this is a test"
+    }
+  }
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
 }
-
 export default App;
