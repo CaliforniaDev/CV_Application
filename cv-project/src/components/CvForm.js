@@ -1,11 +1,12 @@
 import React from 'react';
+import Personal from './Personal';
 
 class CvForm extends React.Component {
     render() {
         return(
-            <div>
-                
-            </div>
+            <form>
+                <Personal />
+            </form>
         )
     }
 }
