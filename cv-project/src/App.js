@@ -6,7 +6,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: "this is a test"
+      personalInfo: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: ''
+      },
+      EduEx
     }
   }
   render() {
