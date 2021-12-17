@@ -1,8 +1,8 @@
 import React from 'react';
 import Personal from './Personal';
-import styles from '../styles/CvForm.module.scss';
+import styles from '../styles/CVForm.module.scss';
 
-class CvForm extends React.Component {
+class CVForm extends React.Component {
     constructor(props) {
         super();
     }
@@ -17,4 +17,4 @@ class CvForm extends React.Component {
         )
     }
 }
-export default CvForm;
+export default CVForm;
