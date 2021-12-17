@@ -14,11 +14,21 @@ class App extends React.Component {
       },
     }
   }
+  handleChange = e => {
+    this.setState({
+      personalInfo: {
+        [e.target.name]: e.target.value
+      },
+    })
+  }
   render() {
+    console.log(this.state.personalInfo);
     return (
       <div>
         <Header />
-        <CvForm />
+        <CvForm 
+          handleChangeProp={this.handleChange} 
+        />
       </div>
     )
   }
