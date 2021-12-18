@@ -32,7 +32,9 @@ class App extends React.Component {
           personalInfo={this.state.personalInfo}
           handleChangePersonal={this.handleChangePersonal} 
         />
-        <CVPreview personalInfo={this.state.personalInfo} />
+        <CVPreview
+          personalInfo={this.state.personalInfo} 
+        />
       </div>
     )
   }
