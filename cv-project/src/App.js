@@ -22,7 +22,7 @@ class App extends React.Component {
         ...state.personalInfo,
         [e.target.name]: e.target.value
       },
-    }))
+    }));
   }
   render() {
     return (
