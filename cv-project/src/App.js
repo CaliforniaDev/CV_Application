@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/CVForm/Header";
 import CVForm from "./components/CVForm/CVForm";
-import CVPreview from "./components/CVPreview";
+import CVPreview from "./components/CVPreview/CVPreview";
 
 
 class App extends React.Component {

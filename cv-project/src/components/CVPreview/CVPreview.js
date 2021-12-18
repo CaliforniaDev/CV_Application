@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../../styles/CVPreview.module.scss';
 
 class CVPreview extends React.Component {
     constructor(props){
@@ -8,7 +9,7 @@ class CVPreview extends React.Component {
     render() {
         const { firstName, lastName, email, phoneNumber } = this.props.personalInfo;
         return (
-            <div>
+            <div className={styles.test}>
                 <p> {firstName} </p>
                 <p> {lastName} </p>
                 <p> {email} </p>
