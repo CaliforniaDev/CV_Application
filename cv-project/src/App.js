@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header";
-import CVForm from "./components/CVForm";
+import Header from "./components/CVForm/Header";
+import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview";
 
 
@@ -33,7 +33,7 @@ class App extends React.Component {
           handleChangePersonal={this.handleChangePersonal} 
         />
         <CVPreview
-          personalInfo={this.state.personalInfo} 
+        personalInfo={this.state.personalInfo} 
         />
       </div>
     )

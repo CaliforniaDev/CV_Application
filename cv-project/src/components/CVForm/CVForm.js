@@ -1,6 +1,6 @@
 import React from 'react';
 import Personal from './Personal';
-import styles from '../styles/CVForm.module.scss';
+import styles from '../../styles/CVForm.module.scss';
 
 class CVForm extends React.Component {
     constructor(props) {

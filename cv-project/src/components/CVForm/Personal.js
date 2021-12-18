@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Personal.module.scss";
+import styles from "../../styles/Personal.module.scss";
 
 class Personal extends React.Component {
     constructor(props) {
