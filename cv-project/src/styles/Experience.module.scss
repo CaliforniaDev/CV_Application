@@ -1,0 +1,11 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > input {
+    margin-bottom: 1.6rem;
+}
