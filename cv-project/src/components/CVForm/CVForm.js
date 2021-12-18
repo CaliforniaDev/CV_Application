@@ -1,5 +1,6 @@
 import React from 'react';
 import Personal from './Personal';
+import Experience from './Experience';
 import styles from '../../styles/CVForm.module.scss';
 
 class CVForm extends React.Component {
@@ -15,6 +16,7 @@ class CVForm extends React.Component {
                       personalInfo={personalInfo}
                       handleChange={handleChangePersonal}
                     />
+                    < Experience />
                 </form>
             </main>
         )
