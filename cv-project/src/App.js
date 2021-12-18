@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/CVForm/Header";
+import Header from "./components/Header";
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
 
