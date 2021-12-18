@@ -7,11 +7,14 @@ class CVForm extends React.Component {
         super();
     }
     render() {
-        const { handleChangeProp } = this.props;
+        const { personalInfo, handleChangePersonal } = this.props;
         return (
             <main className={styles.mainWrapper}>
                 <form className={styles.formContainer}>
-                    <Personal handleChangeProp={handleChangeProp}/>
+                    <Personal 
+                      personalInfo={personalInfo}
+                      handleChange={handleChangePersonal}
+                    />
                 </form>
             </main>
         )
