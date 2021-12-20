@@ -16,10 +16,19 @@ class App extends React.Component {
         phoneNumber: ''
       },
       experience: [
-        
+        {
+          id: uuidv4(),
+          position: 'Web Dev',
+          company: 'Nybble Box',
+          city: 'Riverside',
+          state: 'CA',
+          from: '2020',
+          to: '2021'
+        }
       ]
     }
   }
+
   handleChangePersonal = e => {
     this.setState(state => ({
       personalInfo: {
