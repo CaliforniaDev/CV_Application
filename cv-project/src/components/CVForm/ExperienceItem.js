@@ -1,14 +1,32 @@
-import React from 'react';
+const ExperienceItem = (props) => {
+    return (
+        <div>
+            <input
+              type='text' name='position'
+              placeholder='Position'
+            />
 
-class ExperienceItem extends React.Component {
-    constructor(props) {
-        super();
-    }
-    render() {
-        return (
-            <div>
-                Experience Item.
-            </div>
-        )
-    }
+            <input
+              type='text' name='company'
+              placeholder='Company'
+            />
+
+            <input
+              type='text' name='city'
+              placeholder='City'
+            />
+
+            <input
+              type='text' name='from'
+              placeholder='From'
+            />
+
+            <input
+              type='text' name='to'
+              placeholder='To'
+            />
+        </div>
+    )
 }
+
+export default ExperienceItem;
