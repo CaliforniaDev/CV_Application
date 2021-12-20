@@ -37,12 +37,17 @@ class App extends React.Component {
       },
     }));
   }
+  handleAddExperience = () => {
+    console.log("Add Button clicked");
+  }
   render() {
     return (
       <div>
         <Header />
         <CVForm
           personalInfo={this.state.personalInfo}
+          experience={this.state.experience}
+          handleAddExperience={this.handleAddExperience}
           handleChangePersonal={this.handleChangePersonal} 
         />
         <CVPreview
