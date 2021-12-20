@@ -37,7 +37,8 @@ class App extends React.Component {
       },
     }));
   }
-  handleAddExperience = () => {
+  handleAddExperience = e => {
+    e.preventDefault();
     console.log("Add Button clicked");
   }
   render() {
