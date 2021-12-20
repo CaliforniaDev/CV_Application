@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/Experience.module.scss';
+import Button from '../Utils/Button';
 
 class Experience extends React.Component {
     constructor(props) {
@@ -7,11 +8,13 @@ class Experience extends React.Component {
     }
     render() {
         const { experience, handleAddExperience } = this.props;
-        console.log(experience);
         return (
             <section className={styles.sectionContainer}>
                 <h4>Experience</h4>
-                <button onClick={e => handleAddExperience(e)} className={styles.addButton}>Add</button>
+                
+                <Button 
+                  onClick={e => handleAddExperience(e)} 
+                />
             </section>
         )
     }
