@@ -1,9 +1,11 @@
+$light-font: #f8f8f8;
+
 .sectionContainer {
     display: flex;
     flex-direction: column;
     color: #444;
     margin-bottom: 2.4rem;
-    gap: 1rem;
+    gap: 1.6rem;
 }
 .wrapper {
     display: flex;
@@ -14,4 +16,19 @@
     height: 3.2rem;
     padding:0 0.8rem;
     border-color: rgba(68, 68, 68, 0.30);
+}
+
+.addButton {
+    cursor: pointer;
+    background: #444;
+    color: $light-font;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 2rem;
+}
+.addButton:hover {
+    background: #333;
+}
+.addButton:active {
+    background: #444;
 }
