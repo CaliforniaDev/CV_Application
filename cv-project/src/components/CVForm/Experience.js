@@ -13,9 +13,10 @@ class Experience extends React.Component {
           console.log(experienceItem);
           return (
             <ExperienceItem
-            key={experienceItem.id}
-            onChange={onChangeExperience}
-            experienceItem={experienceItem}
+              key={experienceItem.id}
+              id={experienceItem.id}
+              onChange={onChangeExperience}
+              experienceItem={experienceItem}
           />
           )
         })
