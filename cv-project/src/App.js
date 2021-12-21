@@ -52,7 +52,18 @@ class App extends React.Component {
 
   handleAddExperience = e => {
     e.preventDefault();
-    console.log("Add Button clicked");
+    const newItem = {
+      id: uuidv4(),
+      position: '',
+      company: '',
+      city: '',
+      state: '',
+      from: '',
+      to: '',
+    }
+    this.setState(state => ({
+      experience: [...state.experience, newItem]
+    }))
   }
   render() {
     return (
