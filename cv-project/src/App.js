@@ -37,6 +37,11 @@ class App extends React.Component {
       },
     }));
   }
+
+  onChangeExperience = (e, id) => {
+    console.log("input changed");
+  }
+
   handleAddExperience = e => {
     e.preventDefault();
     console.log("Add Button clicked");
@@ -49,6 +54,7 @@ class App extends React.Component {
           personalInfo={this.state.personalInfo}
           experience={this.state.experience}
           handleAddExperience={this.handleAddExperience}
+          onChangeExperience={this.onChangeExperience}
           handleChangePersonal={this.handleChangePersonal} 
         />
         <CVPreview

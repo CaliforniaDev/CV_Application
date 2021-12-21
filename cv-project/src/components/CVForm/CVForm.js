@@ -8,7 +8,8 @@ class CVForm extends React.Component {
         super();
     }
     render() {
-        const { personalInfo, experience, handleAddExperience, handleChangePersonal } = this.props;
+        const { personalInfo, experience, onChangeExperience,
+                handleAddExperience, handleChangePersonal } = this.props;
         return (
             <main className={styles.mainWrapper}>
                 <form className={styles.formContainer}>
@@ -18,6 +19,7 @@ class CVForm extends React.Component {
                     />
                     <Experience
                       experience={experience}
+                      onChangeExperience={onChangeExperience}
                       handleAddExperience={handleAddExperience} 
                     />
                 </form>
