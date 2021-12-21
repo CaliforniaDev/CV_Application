@@ -10,7 +10,6 @@ class Experience extends React.Component {
     render() {
         const { experience, handleAddExperience, onChangeExperience } = this.props;
         const experienceItems = experience.map(experienceItem => {
-          console.log(experienceItem);
           return (
             <ExperienceItem
               key={experienceItem.id}
@@ -34,35 +33,3 @@ class Experience extends React.Component {
 
 
 export default Experience;
-
-
-{
-    /*
-<div className={styles.wrapper}>
-<input 
-  type='text' name='position' 
-  placeholder='Position' 
-/>
-
-<input 
-  type='text' name='company' 
-  placeholder='Company' 
-/>
-
-<input 
-  type='text' name='city' 
-  placeholder='City' 
-/>
-
-<input 
-  type='text' name='from' 
-  placeholder='From' 
-/>
-
-<input 
-  type='text' name='to' 
-  placeholder='To' 
-/>
-</div>
-    */
-}

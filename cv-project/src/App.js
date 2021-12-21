@@ -42,7 +42,6 @@ class App extends React.Component {
     const { name, value } = e.target;
     this.setState(state => ({
       experience: state.experience.map(experienceItem => {
-        console.log(experienceItem)
         return (experienceItem.id === id) ? 
         { ...experienceItem, [name]: value }
         : experienceItem;
