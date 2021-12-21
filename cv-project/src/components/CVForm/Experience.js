@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/Experience.module.scss';
+import styledButton from '../../styles/Button.module.scss';
 import ExperienceItem from './ExperienceItem';
 import Button from '../Utils/Button';
 
@@ -23,8 +24,10 @@ class Experience extends React.Component {
             <section className={styles.sectionContainer}>
                 <h4>Experience</h4>
                 {experienceItems}
-                <Button 
-                  onClick={e => handleAddExperience(e)} 
+                <Button
+                  classNameProp={styledButton.addButton}
+                  onClick={e => handleAddExperience(e)}
+                  name="Add" 
                 />
             </section>
         )
