@@ -14,3 +14,12 @@ $light-font: #f8f8f8;
 .addButton:active {
     background: #444;
 }
+
+.deleteButton {
+    cursor: pointer;
+    background: #d11a2a;
+    color: $light-font;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 2rem;
+}
