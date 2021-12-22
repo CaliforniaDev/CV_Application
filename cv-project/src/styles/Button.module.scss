@@ -23,3 +23,11 @@ $light-font: #f8f8f8;
     padding: 1.2rem 2.4rem;
     font-size: 2rem;
 }
+
+.deleteButton:hover {
+    background: #b41321;
+}
+
+.deleteButton:active {
+    background: #d11a2a;
+}
