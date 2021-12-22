@@ -9,12 +9,13 @@ class Experience extends React.Component {
         super();
     }
     render() {
-        const { experience, handleAddExperience, onChangeExperience } = this.props;
+        const { experience, handleAddExperience, handleDeleteExperience, onChangeExperience } = this.props;
         const experienceItems = experience.map(experienceItem => {
           return (
             <ExperienceItem
               key={experienceItem.id}
               id={experienceItem.id}
+              deleteItem={handleDeleteExperience}
               onChange={onChangeExperience}
               experienceItem={experienceItem}
           />

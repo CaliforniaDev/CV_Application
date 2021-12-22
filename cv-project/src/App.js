@@ -64,6 +64,15 @@ class App extends React.Component {
       experience: [...state.experience, newItem]
     }))
   }
+
+  handleDeleteExperience = (e, id) => {
+    e.preventDefault();
+    console.log("delete clicked");
+    this.setState(state => ({
+      experience: state.experience.filter(item => item.id !== id),
+    }))
+  }
+
   render() {
     return (
       <div>
@@ -72,6 +81,7 @@ class App extends React.Component {
           personalInfo={this.state.personalInfo}
           experience={this.state.experience}
           handleAddExperience={this.handleAddExperience}
+          handleDeleteExperience={this.handleDeleteExperience}
           onChangeExperience={this.onChangeExperience}
           handleChangePersonal={this.handleChangePersonal} 
         />

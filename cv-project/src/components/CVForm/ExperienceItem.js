@@ -2,7 +2,7 @@ import styles from '../../styles/Experience.module.scss';
 import styledButton from '../../styles/Button.module.scss';
 import Button from '../Utils/Button';
 
-const ExperienceItem = ({ experienceItem, id, onChange }) => {
+const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
 
   return (
     <div className={styles.wrapper}>
@@ -42,7 +42,7 @@ const ExperienceItem = ({ experienceItem, id, onChange }) => {
       />
       <Button
         classNameProp={styledButton.deleteButton}
-        onClick={(e) => { e.preventDefault() }}
+        onClick={(e) => deleteItem(e, id)}
         name="Delete"
       />
     </div>
