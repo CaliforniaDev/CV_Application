@@ -1,6 +1,7 @@
 import React from 'react';
 import Personal from './Personal';
 import Experience from './Experience';
+import Education from './Education';
 import styles from '../../styles/CVForm.module.scss';
 
 class CVForm extends React.Component {
@@ -23,6 +24,7 @@ class CVForm extends React.Component {
                       handleAddExperience={handleAddExperience}
                       handleDeleteExperience={handleDeleteExperience} 
                     />
+                    <Education />
                 </form>
             </main>
         )
