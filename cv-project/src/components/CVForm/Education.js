@@ -11,7 +11,8 @@ class Education extends React.Component {
     render() {
         const {
             education,
-            onChangeEducation
+            onChangeEducation,
+            handleAddEducation
         } = this.props;
 
         
@@ -34,6 +35,7 @@ class Education extends React.Component {
                 <Button
                   name="Add"
                   classNameProp={styledButton.addButton}
+                  onClick={e => handleAddEducation(e)}
                 />
             </section>
         );
