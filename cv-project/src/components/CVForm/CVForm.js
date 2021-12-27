@@ -32,7 +32,7 @@ class CVForm extends React.Component {
                       handleDeleteExperience={handleDeleteExperience} 
                     />
                     <Education
-                      
+                      onChangeEducation={onChangeEducation}
                      />
                 </form>
             </main>
