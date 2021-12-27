@@ -61,8 +61,15 @@ class App extends React.Component {
     }))
   }
   
-  onChangeEducation = () => {
-    console.log("Education change handler");
+  onChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+    this.setState(state => ({
+      education: state.education.map(educationItem => {
+        return (educationItem.id === id) ? 
+        { ...educationItem, [name]: value } 
+        : educationItem;
+      }),
+    }))
   }
 
   handleAddExperience = e => {
