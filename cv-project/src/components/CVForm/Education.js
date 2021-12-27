@@ -7,7 +7,7 @@ class Education extends React.Component {
     }
     render() {
         return (
-            <section className="styles.sectionContainer">
+            <section className={styles.sectionContainer}>
                 Experience Component 
             </section>
         );
