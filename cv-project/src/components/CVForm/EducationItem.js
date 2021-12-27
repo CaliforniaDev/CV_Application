@@ -1,4 +1,7 @@
 import styles from "../../styles/Education.module.scss";
+import styledButton from "../../styles/Button.module.scss";
+import Button from "../Utils/Button";
+
 const EducationItem = ({ educationItem, id, onChangeEducation }) => {
     console.log(educationItem);
     return (
@@ -44,6 +47,12 @@ const EducationItem = ({ educationItem, id, onChangeEducation }) => {
               onChange={e => onChangeEducation(e, id)}
               placeholder="To" 
             />
+
+            <Button
+              name="Add"
+              classNameProp={styledButton.addButton} 
+            />
+
         </div>
     )
 }
