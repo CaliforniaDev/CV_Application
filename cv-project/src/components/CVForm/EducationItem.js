@@ -1,41 +1,47 @@
 import styles from "../../styles/Education.module.scss";
-const EducationItem = ({ education,onChangeEducation }) => {
-    console.log(onChangeEducation);
+const EducationItem = ({ educationItem, id, onChangeEducation }) => {
+    console.log(educationItem);
     return (
         <div className={styles.wrapper}>
-            <input 
+            <input
               type="text" name="school"
-              onChange={onChangeEducation}
+              value={educationItem.school}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="University Name" 
             />
 
             <input
               type="text" name="city"
-              onChange={onChangeEducation}
+              value={educationItem.city}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="City"
             />
 
             <input
               type="text" name="degree"
-              onChange={onChangeEducation}
+              value={educationItem.degree}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="Degree" 
             />
 
             <input
               type="text" name="subject"
-              onChange={onChangeEducation}
+              value={educationItem.subject}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="Subject" 
             />
 
             <input
               type="text" name="from"
-              onChange={onChangeEducation}
+              value={educationItem.from}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="From" 
             />
 
             <input
               type="text" name="to"
-              onChange={onChangeEducation}
+              value={educationItem.to}
+              onChange={e => onChangeEducation(e, id)}
               placeholder="To" 
             />
         </div>
