@@ -11,12 +11,21 @@ class Education extends React.Component {
             education,
             onChangeEducation
         } = this.props;
+        const educationItem = education.map(educationItem => {
+            return (
+                <EducationItem
+                  key={educationItem.id}
+                  id={educationItem.id}
+                  educationItem={educationItem}
+                  onChangeEducation={onChangeEducation} 
+                />
+            )
+        })
+
 
         return (
             <section className={styles.sectionContainer}>
-                <EducationItem
-                  onChangeEducation={onChangeEducation}
-                />
+                {educationItem}
             </section>
         );
     }
