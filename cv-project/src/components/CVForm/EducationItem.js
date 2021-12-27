@@ -1,4 +1,6 @@
+import Button from "../Utils/Button";
 import styles from "../../styles/Education.module.scss";
+import styledButton from "../../styles/Button.module.scss";
 
 
 const EducationItem = ({ educationItem, id, onChangeEducation }) => {
@@ -45,6 +47,11 @@ const EducationItem = ({ educationItem, id, onChangeEducation }) => {
               value={educationItem.to}
               onChange={e => onChangeEducation(e, id)}
               placeholder="To" 
+            />
+
+            <Button
+              name="Delete"
+              classNameProp={styledButton.deleteButton} 
             />
 
         </div>
