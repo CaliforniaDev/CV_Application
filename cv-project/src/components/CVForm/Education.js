@@ -1,6 +1,8 @@
 import React from "react";
 import EducationItem from "./EducationItem";
+import Button from "../Utils/Button";
 import styles from "../../styles/Education.module.scss";
+import styledButton from "../../styles/Button.module.scss";
 
 class Education extends React.Component {
     constructor(props) {
@@ -11,13 +13,15 @@ class Education extends React.Component {
             education,
             onChangeEducation
         } = this.props;
+
+        
         const educationItem = education.map(educationItem => {
             return (
                 <EducationItem
                   key={educationItem.id}
                   id={educationItem.id}
                   educationItem={educationItem}
-                  onChangeEducation={onChangeEducation} 
+                  onChangeEducation={onChangeEducation}
                 />
             )
         })
@@ -27,6 +31,10 @@ class Education extends React.Component {
             <section className={styles.sectionContainer}>
                 <h4>Education</h4>
                 {educationItem}
+                <Button
+                  name="Add"
+                  classNameProp={styledButton.addButton}
+                />
             </section>
         );
     }
