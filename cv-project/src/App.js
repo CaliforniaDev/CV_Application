@@ -48,6 +48,10 @@ class App extends React.Component {
       }),
     }))
   }
+  
+  onChangeEducation = () => {
+    console.log("Education change handler");
+  }
 
   handleAddExperience = e => {
     e.preventDefault();
@@ -83,6 +87,7 @@ class App extends React.Component {
           handleAddExperience={this.handleAddExperience}
           handleDeleteExperience={this.handleDeleteExperience}
           onChangeExperience={this.onChangeExperience}
+          onChangeEducation={this.onChangeEducation}
           handleChangePersonal={this.handleChangePersonal} 
         />
         <CVPreview
