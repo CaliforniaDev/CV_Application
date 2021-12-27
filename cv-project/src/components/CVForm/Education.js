@@ -25,6 +25,7 @@ class Education extends React.Component {
 
         return (
             <section className={styles.sectionContainer}>
+                <h4>Education</h4>
                 {educationItem}
             </section>
         );
