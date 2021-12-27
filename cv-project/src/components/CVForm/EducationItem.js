@@ -4,7 +4,6 @@ import styledButton from "../../styles/Button.module.scss";
 
 
 const EducationItem = ({ educationItem, id, onChangeEducation, deleteItem }) => {
-    console.log(educationItem);
     return (
         <div className={styles.wrapper}>
             <input
