@@ -21,6 +21,7 @@ class Experience extends React.Component {
           />
           )
         })
+        
         return (
             <section className={styles.sectionContainer}>
                 <h4>Experience</h4>
