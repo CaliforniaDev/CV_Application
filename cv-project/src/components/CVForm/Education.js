@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../styles/Education.module.scss";
 
 class Education extends React.Component {
     constructor(props) {
@@ -6,9 +7,9 @@ class Education extends React.Component {
     }
     render() {
         return (
-            <div>
+            <section className="styles.sectionContainer">
                 Experience Component 
-            </div>
+            </section>
         );
     }
 }
