@@ -1,4 +1,5 @@
 import React from "react";
+import EducationItem from "./EducationItem";
 import styles from "../../styles/Education.module.scss";
 
 class Education extends React.Component {
@@ -8,7 +9,7 @@ class Education extends React.Component {
     render() {
         return (
             <section className={styles.sectionContainer}>
-                Experience Component 
+                <EducationItem />
             </section>
         );
     }
