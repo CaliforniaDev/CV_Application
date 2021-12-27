@@ -25,7 +25,19 @@ class App extends React.Component {
           from: '2020',
           to: '2021'
         }
-      ]
+      ],
+      education: [
+        {
+          id: uuidv4(),
+          school: 'DeVry',
+          city: 'Riverside',
+          state: 'CA',
+          degree: 'Bachelors',
+          subject: 'Computer Science',
+          from: '2015',
+          to: '2019'
+        }
+      ],
     }
   }
 
