@@ -12,7 +12,8 @@ class Education extends React.Component {
         const {
             education,
             onChangeEducation,
-            handleAddEducation
+            handleAddEducation,
+            handleDeleteEducation
         } = this.props;
 
         
@@ -21,6 +22,7 @@ class Education extends React.Component {
                 <EducationItem
                   key={educationItem.id}
                   id={educationItem.id}
+                  deleteItem={handleDeleteEducation}
                   educationItem={educationItem}
                   onChangeEducation={onChangeEducation}
                 />

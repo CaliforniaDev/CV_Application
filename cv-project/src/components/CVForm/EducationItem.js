@@ -3,7 +3,7 @@ import styles from "../../styles/Education.module.scss";
 import styledButton from "../../styles/Button.module.scss";
 
 
-const EducationItem = ({ educationItem, id, onChangeEducation }) => {
+const EducationItem = ({ educationItem, id, onChangeEducation, deleteItem }) => {
     console.log(educationItem);
     return (
         <div className={styles.wrapper}>
@@ -51,7 +51,8 @@ const EducationItem = ({ educationItem, id, onChangeEducation }) => {
 
             <Button
               name="Delete"
-              classNameProp={styledButton.deleteButton} 
+              classNameProp={styledButton.deleteButton}
+              onClick={e => deleteItem(e, id)}
             />
 
         </div>
