@@ -7,9 +7,15 @@ class Education extends React.Component {
         super();
     }
     render() {
+        const {
+            onChangeEducation
+        } = this.props;
+
         return (
             <section className={styles.sectionContainer}>
-                <EducationItem />
+                <EducationItem
+                  onChangeEducation={onChangeEducation}
+                />
             </section>
         );
     }
