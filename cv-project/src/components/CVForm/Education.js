@@ -8,6 +8,7 @@ class Education extends React.Component {
     }
     render() {
         const {
+            education,
             onChangeEducation
         } = this.props;
 

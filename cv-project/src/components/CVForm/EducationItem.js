@@ -1,5 +1,5 @@
 import styles from "../../styles/Education.module.scss";
-const EducationItem = ({ onChangeEducation }) => {
+const EducationItem = ({ education,onChangeEducation }) => {
     console.log(onChangeEducation);
     return (
         <div className={styles.wrapper}>

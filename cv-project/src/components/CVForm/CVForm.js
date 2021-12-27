@@ -11,7 +11,8 @@ class CVForm extends React.Component {
     render() {
         const { 
             personalInfo, 
-            experience, 
+            experience,
+            education, 
             onChangeExperience, 
             onChangeEducation, 
             handleAddExperience, 
@@ -32,6 +33,7 @@ class CVForm extends React.Component {
                       handleDeleteExperience={handleDeleteExperience} 
                     />
                     <Education
+                      education={education}
                       onChangeEducation={onChangeEducation}
                      />
                 </form>

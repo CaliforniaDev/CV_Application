@@ -96,6 +96,7 @@ class App extends React.Component {
         <CVForm
           personalInfo={this.state.personalInfo}
           experience={this.state.experience}
+          education={this.state.education}
           handleAddExperience={this.handleAddExperience}
           handleDeleteExperience={this.handleDeleteExperience}
           onChangeExperience={this.onChangeExperience}
