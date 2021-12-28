@@ -2,7 +2,9 @@ import React from 'react';
 import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
+import Button from '../Utils/Button';
 import styles from '../../styles/CVForm.module.scss';
+import styledButton from '../../styles/Button.module.scss';
 
 class CVForm extends React.Component {
     constructor(props) {
@@ -40,6 +42,11 @@ class CVForm extends React.Component {
                       onChangeEducation={onChangeEducation}
                       handleAddEducation={handleAddEducation}
                       handleDeleteEducation={handleDeleteEducation}
+                     />
+
+                     <Button
+                       name="Reset"
+                       classNameProp={styledButton.resetButton} 
                      />
                 </form>
             </main>

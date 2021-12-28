@@ -11,6 +11,7 @@
 }
 .mainWrapper {
     display: flex;
+    flex-direction: column;
     padding: 4rem 8rem;
     justify-content: center;
 }
