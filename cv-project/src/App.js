@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Header from "./components/Header";
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
+import emptyCV from "./components/Utils/emptyCV";
 
 
 class App extends React.Component {
@@ -119,6 +120,11 @@ class App extends React.Component {
     }));
   }
 
+  handleReset = (e, experience, education) => {
+    e.preventDefault();
+    this.setState(emptyCV);
+  }
+
 
   render() {
     return (
@@ -134,7 +140,8 @@ class App extends React.Component {
           handleDeleteEducation={this.handleDeleteEducation}
           onChangeExperience={this.onChangeExperience}
           onChangeEducation={this.onChangeEducation}
-          handleChangePersonal={this.handleChangePersonal} 
+          handleChangePersonal={this.handleChangePersonal}
+          handleReset={this.handleReset}
         />
         <CVPreview
         personalInfo={this.state.personalInfo} 

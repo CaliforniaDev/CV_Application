@@ -21,9 +21,9 @@ class CVForm extends React.Component {
             handleAddEducation, 
             handleDeleteExperience, 
             handleDeleteEducation,
-            handleChangePersonal 
+            handleChangePersonal,
+            handleReset 
             } = this.props;
-
         return (
             <main className={styles.mainWrapper}>
                 <form className={styles.formContainer}>
@@ -46,7 +46,8 @@ class CVForm extends React.Component {
 
                      <Button
                        name="Reset"
-                       classNameProp={styledButton.resetButton} 
+                       classNameProp={styledButton.resetButton}
+                       onClick={e => handleReset(e, experience, education)} 
                      />
                 </form>
             </main>
