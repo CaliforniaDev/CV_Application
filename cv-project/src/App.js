@@ -1,6 +1,5 @@
 import React from "react";
 import { v4 as uuidv4 } from 'uuid';
-import Header from "./components/Header";
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
 import emptyCV from "./components/Utils/emptyCV";
@@ -136,7 +135,6 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <Header />
         <CVForm
           personalInfo={this.state.personalInfo}
           experience={this.state.experience}
