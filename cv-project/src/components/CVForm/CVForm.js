@@ -26,7 +26,7 @@ class CVForm extends React.Component {
             handleReset 
             } = this.props;
         return (
-            <main className={styles.mainWrapper}>
+            <div className={styles.mainWrapper}>
                 <form className={styles.formContainer}>
                     <Personal 
                       personalInfo={personalInfo}
@@ -56,7 +56,7 @@ class CVForm extends React.Component {
                        onClick={e => handleReset(e)} 
                      />
                 </form>
-            </main>
+            </div>
         )
     }
 }
