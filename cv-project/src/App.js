@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
 import emptyCV from "./components/Utils/emptyCV";
+import exampleCV from "./components/Utils/exampleCV";
 
 
 class App extends React.Component {
@@ -19,24 +20,24 @@ class App extends React.Component {
       experience: [
         {
           id: uuidv4(),
-          position: 'Web Dev',
-          company: 'Nybble Box',
-          city: 'Riverside',
-          state: 'CA',
-          from: '2020',
-          to: '2021'
+          position: '',
+          company: '',
+          city: '',
+          state: '',
+          from: '',
+          to: ''
         }
       ],
       education: [
         {
           id: uuidv4(),
-          school: 'DeVry',
-          city: 'Riverside',
-          state: 'CA',
-          degree: 'Bachelors',
-          subject: 'Computer Science',
-          from: '2015',
-          to: '2019'
+          school: '',
+          city: '',
+          state: '',
+          degree: '',
+          subject: '',
+          from: '',
+          to: ''
         }
       ],
     }
@@ -119,6 +120,11 @@ class App extends React.Component {
       education: state.education.filter(item => item.id !== id),
     }));
   }
+
+  handleLoadExample = e => {
+    e.preventDefault();
+    this.setState(exampleCV)
+  }
   
 
   handleReset = e => {
@@ -142,6 +148,7 @@ class App extends React.Component {
           onChangeExperience={this.onChangeExperience}
           onChangeEducation={this.onChangeEducation}
           handleChangePersonal={this.handleChangePersonal}
+          handleLoadExample={this.handleLoadExample}
           handleReset={this.handleReset}
         />
         <CVPreview
