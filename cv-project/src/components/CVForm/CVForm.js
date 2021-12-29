@@ -47,7 +47,7 @@ class CVForm extends React.Component {
                      <Button
                        name="Reset"
                        classNameProp={styledButton.resetButton}
-                       onClick={e => handleReset(e, experience, education)} 
+                       onClick={e => handleReset(e)} 
                      />
                 </form>
             </main>

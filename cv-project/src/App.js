@@ -119,8 +119,9 @@ class App extends React.Component {
       education: state.education.filter(item => item.id !== id),
     }));
   }
+  
 
-  handleReset = (e, experience, education) => {
+  handleReset = e => {
     e.preventDefault();
     this.setState(emptyCV);
   }
