@@ -135,7 +135,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <main>
         <Header />
         <CVForm
           personalInfo={this.state.personalInfo}
@@ -154,7 +154,7 @@ class App extends React.Component {
         <CVPreview
         personalInfo={this.state.personalInfo} 
         />
-      </div>
+      </main>
     )
   }
 }
