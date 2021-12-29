@@ -22,6 +22,7 @@ class CVForm extends React.Component {
             handleDeleteExperience, 
             handleDeleteEducation,
             handleChangePersonal,
+            handleLoadExample,
             handleReset 
             } = this.props;
         return (
@@ -44,6 +45,11 @@ class CVForm extends React.Component {
                       handleDeleteEducation={handleDeleteEducation}
                      />
 
+                     <Button
+                       name="Load Example"
+                       classNameProp={styledButton.loadExampleButton} 
+                       onClick={e => handleLoadExample(e)}
+                     />
                      <Button
                        name="Reset"
                        classNameProp={styledButton.resetButton}
