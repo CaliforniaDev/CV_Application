@@ -1,7 +1,16 @@
+
 .previewContainer{
     display: flex;
     flex-direction: column;
     width: 210mm;
     height: 297mm;
-    background: rgb(238, 238, 238);
+    background: #f8f8f8;
+}
+
+.headerWrapper {
+    background: #444;
+
+    h1 {
+        color: #f8f8f8;
+    }
 }

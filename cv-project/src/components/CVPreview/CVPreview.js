@@ -1,4 +1,5 @@
 import React from "react";
+import CVHeader from "./CVHeader";
 import styles from '../../styles/CVPreview.module.scss';
 
 class CVPreview extends React.Component {
@@ -7,11 +8,11 @@ class CVPreview extends React.Component {
     }
 
     render() {
-      
+        const { state } = this.props;
+        console.log(state);
         return (
             <div className={styles.previewContainer}>
-                <section>
-                </section>
+            <CVHeader personalInfo={state.personalInfo}/>
             </div>
         )
     }
