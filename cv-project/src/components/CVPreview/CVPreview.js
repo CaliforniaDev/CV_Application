@@ -7,13 +7,16 @@ class CVPreview extends React.Component {
     }
 
     render() {
+      
         const { firstName, lastName, email, phoneNumber } = this.props.personalInfo;
         return (
-            <div className={styles.test}>
+            <div className={styles.previewContainer}>
+                <section>
                 <p> {firstName} </p>
                 <p> {lastName} </p>
                 <p> {email} </p>
                 <p> {phoneNumber} </p>
+                </section>
             </div>
         )
     }
