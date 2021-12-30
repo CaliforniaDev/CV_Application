@@ -4,6 +4,7 @@ const exampleCV = {
     personalInfo: {
         firstName: 'John',
         lastName: 'Doe',
+        title: 'Web Developer / UX & UI Designer',
         email: 'johndoe@example.com',
         phoneNumber: '555-555-555'
     },

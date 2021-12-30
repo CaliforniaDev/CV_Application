@@ -13,6 +13,7 @@ class App extends React.Component {
       personalInfo: {
         firstName: '',
         lastName: '',
+        title: '',
         email: '',
         phoneNumber: ''
       },
