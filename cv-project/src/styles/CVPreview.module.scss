@@ -1,3 +1,7 @@
-.test{
-    background: green;
+.previewContainer{
+    display: flex;
+    flex-direction: column;
+    width: 210mm;
+    height: 297mm;
+    background: rgb(238, 238, 238);
 }
