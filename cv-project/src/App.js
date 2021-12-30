@@ -150,7 +150,7 @@ class App extends React.Component {
           handleReset={this.handleReset}
         />
         <CVPreview
-        personalInfo={this.state.personalInfo} 
+        state={this.state} 
         />
       </main>
     )
