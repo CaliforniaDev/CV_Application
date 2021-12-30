@@ -28,6 +28,13 @@ const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
       />
 
       <input
+        value={experienceItem.state}
+        onChange={e => onChange(e, id)}
+        type='text' name='state'
+        placeholder='State'
+      />
+
+      <input
         value={experienceItem.from}
         onChange={e => onChange(e, id)}
         type='text' name='from'

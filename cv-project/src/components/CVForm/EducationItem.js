@@ -21,6 +21,13 @@ const EducationItem = ({ educationItem, id, onChangeEducation, deleteItem }) => 
             />
 
             <input
+              type="text" name="state"
+              value={educationItem.state}
+              onChange={e => onChangeEducation(e, id)}
+              placeholder="State"
+            />
+
+            <input
               type="text" name="degree"
               value={educationItem.degree}
               onChange={e => onChangeEducation(e, id)}
