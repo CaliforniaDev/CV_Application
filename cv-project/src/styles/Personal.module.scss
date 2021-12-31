@@ -12,9 +12,13 @@
 
 }
 
-.wrapper > input {
+.wrapper > input, textarea {
     height: 3.2rem;
     padding:1.8rem 0.8rem;
     border-radius: 0.8rem;
     border-color: rgba(68, 68, 68, 0.30);
+}
+textarea {
+    height: 16rem;
+    padding: 0.8rem 0.8rem;
 }

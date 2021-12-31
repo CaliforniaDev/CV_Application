@@ -82,6 +82,15 @@ class Personal extends React.Component {
             placeholder="Website"
           />
 
+          <textarea 
+            onChange={handleChange} 
+            value={personalInfo.description}
+            name="description" 
+            placeholder="Description" 
+          >
+
+          </textarea>
+
         </div>
 
       </section>
