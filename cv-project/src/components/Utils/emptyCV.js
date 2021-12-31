@@ -5,6 +5,10 @@ const emptyCV = {
       firstName: '',
       lastName: '',
       title: '',
+      address:'',
+      city:'',
+      state: '',
+      zipCode:'',
       email: '',
       phoneNumber: ''
     },

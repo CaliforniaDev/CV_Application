@@ -14,6 +14,10 @@ class App extends React.Component {
         firstName: '',
         lastName: '',
         title: '',
+        address:'',
+        city:'',
+        state: '',
+        zipCode:'',
         email: '',
         phoneNumber: ''
       },

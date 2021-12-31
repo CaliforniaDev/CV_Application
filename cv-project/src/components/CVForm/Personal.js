@@ -35,6 +35,27 @@ class Personal extends React.Component {
 
           <input
             onChange={handleChange}
+            value={personalInfo.address}
+            type='text' name='address'
+            placeholder="Mailing Address"
+          />
+
+          <input
+            onChange={handleChange}
+            value={personalInfo.city}
+            type='text' name='city'
+            placeholder="City"
+          />
+
+          <input
+            onChange={handleChange}
+            value={personalInfo.state}
+            type='text' name='state'
+            placeholder="State"
+          />
+
+          <input
+            onChange={handleChange}
             value={personalInfo.email}
             type='text' name='email'
             placeholder="Email"

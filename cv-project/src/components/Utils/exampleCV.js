@@ -5,6 +5,10 @@ const exampleCV = {
         firstName: 'John',
         lastName: 'Doe',
         title: 'Web Developer / UX & UI Designer',
+        address:'123 Sasame St',
+        city:'Alphabet',
+        state: 'CA',
+        zipCode:'',
         email: 'johndoe@example.com',
         phoneNumber: '555-555-555'
     },
