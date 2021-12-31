@@ -11,7 +11,8 @@ const emptyCV = {
       zipCode:'',
       email: '',
       phoneNumber: '',
-      website: ''
+      website: '',
+      description: ''
     },
     experience: [
       {
