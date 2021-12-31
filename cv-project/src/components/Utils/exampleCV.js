@@ -8,7 +8,7 @@ const exampleCV = {
         address:'123 Sasame St',
         city:'Alphabet',
         state: 'CA',
-        zipCode:'',
+        zipCode:'92222',
         email: 'johndoe@example.com',
         phoneNumber: '555-555-555'
     },
