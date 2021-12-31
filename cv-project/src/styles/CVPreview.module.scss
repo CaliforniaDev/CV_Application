@@ -1,3 +1,13 @@
+$light-font: #f8f8f8;
+
+@mixin theme($primary: $add-button ) {
+    cursor: pointer;
+    background: $primary;
+    color:  $light-font;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-size: 2rem;
+}
 
 .previewContainer{
     display: flex;
@@ -5,12 +15,26 @@
     width: 210mm;
     height: 297mm;
     background: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.headerWrapper {
+.headerContainer {
     background: #444;
+    color: $light-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    .headerWrapper {
+        margin: 4rem;
+    }
     h1 {
-        color: #f8f8f8;
+        font-weight: 200;
+        line-height: 5.2rem;
+        margin: 0;
+    }
+    h3 {
+        font-size: 2.4rem;
+        font-weight: 300;
     }
 }
