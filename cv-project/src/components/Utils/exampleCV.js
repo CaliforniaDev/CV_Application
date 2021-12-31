@@ -10,7 +10,8 @@ const exampleCV = {
         state: 'CA',
         zipCode:'92222',
         email: 'johndoe@example.com',
-        phoneNumber: '555-555-555'
+        phoneNumber: '555-555-555',
+        website: 'www.johndoe.com',
     },
     experience: [
         {

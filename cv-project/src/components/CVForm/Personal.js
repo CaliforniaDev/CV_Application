@@ -74,6 +74,14 @@ class Personal extends React.Component {
             type='text' name='phoneNumber'
             placeholder="Phone number"
           />
+
+          <input
+            onChange={handleChange}
+            value={personalInfo.website}
+            type='text' name='website'
+            placeholder="Website"
+          />
+
         </div>
 
       </section>

@@ -10,7 +10,8 @@ const emptyCV = {
       state: '',
       zipCode:'',
       email: '',
-      phoneNumber: ''
+      phoneNumber: '',
+      website: ''
     },
     experience: [
       {

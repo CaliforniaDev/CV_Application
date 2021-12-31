@@ -19,7 +19,8 @@ class App extends React.Component {
         state: '',
         zipCode:'',
         email: '',
-        phoneNumber: ''
+        phoneNumber: '',
+        website: ''
       },
       experience: [
         {
