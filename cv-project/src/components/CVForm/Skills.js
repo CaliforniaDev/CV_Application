@@ -28,10 +28,6 @@ class Skills extends React.Component {
                   classNameProp={styledButton.addButton}
                   name='Add' 
                 />
-                <Button
-                  classNameProp={styledButton.deleteButton}
-                  name='Delete'
-                />
             </section>
         )
     }
