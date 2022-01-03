@@ -1,4 +1,5 @@
 $light-font: #f8f8f8;
+$dark-font: #444;
 $gray-background: #444;
 
 @mixin theme($primary: $add-button ) {
@@ -9,7 +10,18 @@ $gray-background: #444;
     padding: 1.2rem 2.4rem;
     font-size: 2rem;
 }
-
+h4 {
+    color: $dark-font;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+p {
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: $dark-font;
+}
 .previewContainer{
     display: flex;
     flex-direction: column;
@@ -43,7 +55,6 @@ $gray-background: #444;
 
 .personalInfoSection {
     display: flex;
-    color: $gray-background;
     font-weight: lighter;
     flex-wrap: nowrap;
 
@@ -52,7 +63,6 @@ $gray-background: #444;
         flex-direction: column;
         flex-basis: 30%;
        
-        //border: 1px solid $gray-background;
     }
     .contactsWrapper {
         margin: 4rem;
@@ -63,16 +73,6 @@ $gray-background: #444;
     .profileWrapper {
         margin: 4rem;
     }
-    h4{
-        font-weight: bold;
-        font-size: 2rem;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
-    p {
-        font-weight: normal;
-        font-size: 1.6rem;
-    }
 }
 
 .experienceSection {
@@ -82,7 +82,6 @@ $gray-background: #444;
     .skills {
         display: flex;
         flex-direction: column;
-    
         flex-basis: 30%;
         padding: 0 4rem;
     }
@@ -91,5 +90,16 @@ $gray-background: #444;
         padding: 0 4rem;
     }
 }
+.educationSection {
+    display: flex;
+    width: 100%;
+    .educationWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        padding: 0 4rem;
+    }
+}
+
 
 
