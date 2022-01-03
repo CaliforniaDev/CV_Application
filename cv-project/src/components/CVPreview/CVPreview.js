@@ -16,7 +16,8 @@ class CVPreview extends React.Component {
             <CVBody
               personalInfo={state.personalInfo}
               experience={state.experience}
-              education={state.education} 
+              education={state.education}
+              skills={state.skills} 
             />
             </div>
         )

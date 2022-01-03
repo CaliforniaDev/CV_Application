@@ -1,12 +1,22 @@
 import styles from "../../styles/CVPreview.module.scss";
 import ExperienceItem from "./ExperienceItem";
-const CVBody = ({ personalInfo, experience, education }) => {
+import Skills from './Skills';
 
+
+const CVBody = ({ personalInfo, experience, education, skills }) => {
     const experimentItems = experience.map(experienceItem => {
         return <ExperienceItem
             key={experienceItem.id}
             experienceItem={experienceItem}
         />
+    })
+    const skillItems = skills.map(skillItem => {
+        return (
+            <Skills
+                key={skillItem.id}
+                skillItem={skillItem}
+            />
+        )
     })
 
     return (
@@ -22,24 +32,26 @@ const CVBody = ({ personalInfo, experience, education }) => {
                         <h4>WEBSITE</h4>
                         <p>{personalInfo.website}</p>
                     </div>
-
                 </div>
+
                 <div className={styles.profileDiv}>
                     <div className={styles.profileWrapper}>
                         <h4>Profile</h4>
                         <LoremIpsum />
                     </div>
-
                 </div>
             </section>
+
+
             <section className={styles.experienceSection}>
-                <div className={styles.skills}></div>
+                <div className={styles.skills}>
+                    <h4>SKILLS</h4>
+                    {skillItems}
+                </div>
                 {experimentItems}
             </section>
         </div>
-
     );
-
 }
 
 const LoremIpsum = () => {

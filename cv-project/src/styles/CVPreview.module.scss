@@ -74,18 +74,22 @@ $gray-background: #444;
         font-size: 1.6rem;
     }
 }
-.skills {
-    display: flex;
-    background: blue;
-    flex-basis: 30%;
-}
+
 .experienceSection {
     display: flex;
     height: 200px;
-    background-color: #444;
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+    
+        flex-basis: 30%;
+        padding: 0 4rem;
+    }
+    .experienceItemsWrapper {
+        flex-basis: 70%;
+        padding: 0 4rem;
+    }
 }
-.experienceItemsWrapper {
-    flex-basis: 70%;
-    padding: 0 4rem;
-}
+
 
