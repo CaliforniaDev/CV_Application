@@ -13,6 +13,7 @@ $gray-background: #444;
 .previewContainer{
     display: flex;
     flex-direction: column;
+    border: 1px solid cyan;
     width: 210mm;
     height: 297mm;
     background: #f8f8f8;
@@ -40,21 +41,32 @@ $gray-background: #444;
     }
 }
 
-.contactInfoContainer {
+.personalInfoSection {
     display: flex;
     color: $gray-background;
     font-weight: lighter;
+    flex-wrap: nowrap;
 
-    .contactsWrapper {
+    .contactsDiv {
         display: flex;
         flex-direction: column;
-        margin: 4rem;
+        flex-basis: 30%;
+       
         //border: 1px solid $gray-background;
+    }
+    .contactsWrapper {
+        margin: 4rem;
+    }
+    .profileDiv {
+        flex-basis: 70%;
+    }
+    .profileWrapper {
+        margin: 4rem;
     }
     h4{
         font-weight: bold;
         font-size: 2rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         white-space: nowrap;
     }
     p {
@@ -62,3 +74,18 @@ $gray-background: #444;
         font-size: 1.6rem;
     }
 }
+.skills {
+    display: flex;
+    background: blue;
+    flex-basis: 30%;
+}
+.experienceSection {
+    display: flex;
+    height: 200px;
+    background-color: #444;
+}
+.experienceItemsWrapper {
+    flex-basis: 70%;
+    padding: 0 4rem;
+}
+
