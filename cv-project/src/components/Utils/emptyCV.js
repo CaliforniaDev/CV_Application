@@ -37,6 +37,12 @@ const emptyCV = {
         to: ''
       }
     ],
+    skills: [
+      {
+        id: uuidv4(),
+        skill: ''
+      }
+    ]
   }
 
   export default emptyCV;

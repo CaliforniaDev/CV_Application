@@ -39,6 +39,28 @@ const exampleCV = {
             to: '2014'
         }
     ],
+    skills: [
+        {
+            id: uuidv4(),
+            skill: 'Web Development'
+        },
+        {
+            id: uuidv4(),
+            skill: 'JavaScript / ES6'
+        },
+        {
+            id: uuidv4(),
+            skill: 'UI / UX Design'
+        },
+        {
+            id: uuidv4(),
+            skill: 'Git / Github'
+        },
+        {
+            id: uuidv4(),
+            skill: 'MySQL'
+        }
+    ]
 }
 
 
