@@ -9,7 +9,7 @@ class Skills extends React.Component {
         super();
     }
     render() {
-        const { skills, onChangeSkills } = this.props;
+        const { skills, onChangeSkills, handleAddSkill } = this.props;
         const skillItem = skills.map(skillItem => {
             return(
                 <SkillsItems
@@ -25,6 +25,7 @@ class Skills extends React.Component {
                 <h4>Skills</h4>
                 {skillItem}
                 <Button 
+                  onClick={e => handleAddSkill(e)}
                   classNameProp={styledButton.addButton}
                   name='Add' 
                 />

@@ -128,6 +128,16 @@ class App extends React.Component {
       education: [...state.education, newItem]
     }));
   }
+  handleAddSkill = (e) => {
+    e.preventDefault();
+    const newSkillItem = {
+      id: uuidv4(),
+      skill: ''
+    }
+    this.setState(state => ({
+      skills: [ ...state.skills, newSkillItem ]
+    }))
+  }
 
   handleDeleteExperience = (e, id) => {
     e.preventDefault();
@@ -165,6 +175,7 @@ class App extends React.Component {
           skills={this.state.skills}
           handleAddExperience={this.handleAddExperience}
           handleAddEducation={this.handleAddEducation}
+          handleAddSkill={this.handleAddSkill}
           handleDeleteExperience={this.handleDeleteExperience}
           handleDeleteEducation={this.handleDeleteEducation}
           onChangeExperience={this.onChangeExperience}
