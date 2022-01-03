@@ -153,6 +153,13 @@ class App extends React.Component {
     }));
   }
 
+  handleDeleteSkill = (e, id) => {
+    e.preventDefault()
+    this.setState(state => ({
+      skills: state.skills.filter(item => item.id !== id),
+    }));
+  }
+
   handleLoadExample = e => {
     e.preventDefault();
     this.setState(exampleCV)
@@ -178,6 +185,7 @@ class App extends React.Component {
           handleAddSkill={this.handleAddSkill}
           handleDeleteExperience={this.handleDeleteExperience}
           handleDeleteEducation={this.handleDeleteEducation}
+          handleDeleteSkill={this.handleDeleteSkill}
           onChangeExperience={this.onChangeExperience}
           onChangeEducation={this.onChangeEducation}
           onChangeSkills={this.onChangeSkills}

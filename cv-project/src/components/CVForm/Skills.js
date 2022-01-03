@@ -9,13 +9,14 @@ class Skills extends React.Component {
         super();
     }
     render() {
-        const { skills, onChangeSkills, handleAddSkill } = this.props;
+        const { skills, onChangeSkills, handleAddSkill, handleDeleteSkill } = this.props;
         const skillItem = skills.map(skillItem => {
             return(
                 <SkillsItems
                   key={skillItem.id}
                   id={skillItem.id}
                   onChange={onChangeSkills}
+                  deleteItem={handleDeleteSkill}
                   skillItem={skillItem} 
                 />
             );

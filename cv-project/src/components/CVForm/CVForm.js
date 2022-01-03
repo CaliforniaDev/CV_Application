@@ -25,6 +25,7 @@ class CVForm extends React.Component {
             handleAddSkill, 
             handleDeleteExperience, 
             handleDeleteEducation,
+            handleDeleteSkill,
             handleChangePersonal,
             handleLoadExample,
             handleReset 
@@ -52,6 +53,7 @@ class CVForm extends React.Component {
                        skills={skills}
                        onChangeSkills={onChangeSkills}
                        handleAddSkill={handleAddSkill}
+                       handleDeleteSkill={handleDeleteSkill}
                      />
 
                      <Button
