@@ -1,5 +1,6 @@
 import styles from "../../styles/CVPreview.module.scss";
 import ExperienceItem from "./ExperienceItem";
+import EducationItem from "./EducationItem"
 import Skills from './Skills';
 
 
@@ -10,11 +11,21 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
             experienceItem={experienceItem}
         />
     })
+
     const skillItems = skills.map(skillItem => {
         return (
             <Skills
                 key={skillItem.id}
                 skillItem={skillItem}
+            />
+        )
+    })
+
+    const educationItem = education.map(educationItem => {
+        return (
+            <EducationItem 
+              key={educationItem.id}
+              educationItem={educationItem}
             />
         )
     })
@@ -42,13 +53,18 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
                 </div>
             </section>
 
-
             <section className={styles.experienceSection}>
                 <div className={styles.skills}>
                     <h4>SKILLS</h4>
                     {skillItems}
                 </div>
                 {experimentItems}
+            </section>
+            <section className={styles.educationSection}>
+                <div className={styles.educationWrapper}>
+                <h4>Education</h4>
+                {educationItem}
+                </div>
             </section>
         </div>
     );
