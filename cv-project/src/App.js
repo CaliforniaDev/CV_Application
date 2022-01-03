@@ -85,6 +85,16 @@ class App extends React.Component {
       }),
     }))
   }
+  onChangeSkills = (e, id) => {
+    const {name, value} = e.target;
+    this.setState(state => ({
+      skills: state.skills.map(skillItem => {
+        return (skillItem.id === id) ? 
+        { ...skillItem, [name]: value }
+        : skillItem;
+      }),
+    }))
+  }
 
   handleAddExperience = e => {
     e.preventDefault();
@@ -152,12 +162,14 @@ class App extends React.Component {
           personalInfo={this.state.personalInfo}
           experience={this.state.experience}
           education={this.state.education}
+          skills={this.state.skills}
           handleAddExperience={this.handleAddExperience}
           handleAddEducation={this.handleAddEducation}
           handleDeleteExperience={this.handleDeleteExperience}
           handleDeleteEducation={this.handleDeleteEducation}
           onChangeExperience={this.onChangeExperience}
           onChangeEducation={this.onChangeEducation}
+          onChangeSkills={this.onChangeSkills}
           handleChangePersonal={this.handleChangePersonal}
           handleLoadExample={this.handleLoadExample}
           handleReset={this.handleReset}

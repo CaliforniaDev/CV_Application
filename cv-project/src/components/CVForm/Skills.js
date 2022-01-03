@@ -8,12 +8,22 @@ class Skills extends React.Component {
     constructor(props) {
         super();
     }
-    
     render() {
+        const { skills, onChangeSkills } = this.props;
+        const skillItem = skills.map(skillItem => {
+            return(
+                <SkillsItems
+                  key={skillItem.id}
+                  id={skillItem.id}
+                  onChange={onChangeSkills}
+                  skillItem={skillItem} 
+                />
+            );
+        })
         return (
             <section className={styles.sectionContainer}>
                 <h4>Skills</h4>
-                <SkillsItems />
+                {skillItem}
                 <Button 
                   classNameProp={styledButton.addButton}
                   name='Add' 

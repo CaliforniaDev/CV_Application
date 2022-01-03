@@ -15,9 +15,11 @@ class CVForm extends React.Component {
         const { 
             personalInfo, 
             experience,
-            education, 
+            education,
+            skills, 
             onChangeExperience, 
             onChangeEducation, 
+            onChangeSkills,
             handleAddExperience,
             handleAddEducation, 
             handleDeleteExperience, 
@@ -45,7 +47,10 @@ class CVForm extends React.Component {
                       handleAddEducation={handleAddEducation}
                       handleDeleteEducation={handleDeleteEducation}
                      />
-                     <Skills />
+                     <Skills
+                       skills={skills}
+                       onChangeSkills={onChangeSkills}
+                     />
 
                      <Button
                        name="Load Example"

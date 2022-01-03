@@ -1,10 +1,13 @@
 import styles from '../../styles/Skills.module.scss';
 
-const SkillsItems = props => {
+const SkillsItems = ({ skillItem, id, onChange }) => {
     return (
         <div className={styles.wrapper}>
             <input
-              type='text' placeholder='Enter a skill'
+              value={skillItem.skill}
+              onChange={e => onChange(e, id)}
+              type='text' name='skill'
+              placeholder='Enter a skill'
             />
         </div>
     );
