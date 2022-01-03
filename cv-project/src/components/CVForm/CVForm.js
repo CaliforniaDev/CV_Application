@@ -2,6 +2,7 @@ import React from 'react';
 import Personal from './Personal';
 import Experience from './Experience';
 import Education from './Education';
+import Skills from './Skills';
 import Button from '../Utils/Button';
 import styles from '../../styles/CVForm.module.scss';
 import styledButton from '../../styles/Button.module.scss';
@@ -44,6 +45,7 @@ class CVForm extends React.Component {
                       handleAddEducation={handleAddEducation}
                       handleDeleteEducation={handleDeleteEducation}
                      />
+                     <Skills />
 
                      <Button
                        name="Load Example"

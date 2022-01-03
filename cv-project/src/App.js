@@ -46,6 +46,12 @@ class App extends React.Component {
           to: ''
         }
       ],
+      skills: [
+        {
+          id: uuidv4(),
+          skill: ''
+        }
+      ]
     }
   }
 
