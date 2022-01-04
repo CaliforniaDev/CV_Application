@@ -48,11 +48,10 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
                 <div className={styles.profileDiv}>
                     <div className={styles.profileWrapper}>
                         <h4>Profile</h4>
-                        <LoremIpsum />
+                        <p>{personalInfo.description}</p>
                     </div>
                 </div>
             </section>
-
             <section className={styles.experienceSection}>
                 <div className={styles.skills}>
                     <h4>SKILLS</h4>
@@ -70,20 +69,7 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
     );
 }
 
-const LoremIpsum = () => {
-    return (
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.</p>
-        </div>
-    );
-}
+
 
 
 
