@@ -22,85 +22,25 @@ p {
     font-size: 1.6rem;
     color: $dark-font;
 }
+h1 {
+    font-weight: 200;
+    line-height: 5.2rem;
+    margin: 0;
+}
+h3 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
 .previewContainer{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid cyan;
+    display: grid;
+    grid-template-columns: 70mm 140mm;
+    grid-template-rows: 50mm 247mm;
     width: 210mm;
     height: 297mm;
     background: #f8f8f8;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.headerContainer {
-    background: $gray-background;
-    color: $light-font;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .headerWrapper {
-        margin: 4rem;
-    }
-    h1 {
-        font-weight: 200;
-        line-height: 5.2rem;
-        margin: 0;
-    }
-    h3 {
-        font-size: 2.4rem;
-        font-weight: 300;
-    }
-}
-
-.personalInfoSection {
-    display: flex;
-    font-weight: lighter;
-    flex-wrap: nowrap;
-
-    .contactsDiv {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 35%;
-       
-    }
-    .contactsWrapper {
-        margin: 4rem;
-    }
-    .profileDiv {
-        flex-basis: 65%;
-    }
-    .profileWrapper {
-        margin: 4rem 4rem 4rem 0;
-    }
-}
-
-.experienceSection {
-    display: flex;
-    margin-bottom: 4rem;
-
-    .skills {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 35%;
-        padding: 0 4rem;
-    }
-    .experienceItemsWrapper {
-        display: flex;
-        flex-direction: column;
-        
-    }
-}
-.educationSection {
-    display: flex;
-    width: 100%;
-    .educationWrapper {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 35%;
-        padding: 0 4rem;
-    }
-}
 
 
 
