@@ -1,6 +1,7 @@
 import React from "react";
 import CVHeader from "./CVHeader";
 import CVBody from "./CVBody";
+import styled from "styled-components";
 import styles from '../../styles/CVPreview.module.scss';
 
 class CVPreview extends React.Component {
@@ -11,7 +12,7 @@ class CVPreview extends React.Component {
     render() {
         const { state } = this.props;
         return (
-            <div className={styles.previewContainer}>
+            <CVPreviewContainer>
             <CVHeader personalInfo={state.personalInfo}/>
             <CVBody
               personalInfo={state.personalInfo}
@@ -19,8 +20,18 @@ class CVPreview extends React.Component {
               education={state.education}
               skills={state.skills} 
             />
-            </div>
+            </CVPreviewContainer>
         )
     }
 }
+
+const CVPreviewContainer = styled.div`
+    display: grid;
+    grid-template-columns: 70mm 140mm;
+    grid-template-rows: 50mm 247mm;
+    width: 210mm;
+    height: 297mm;
+    background: ${({ theme }) => theme.colors.light};
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`
 export default CVPreview;
