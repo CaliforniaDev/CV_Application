@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from "../src/components/Header";
+import { ThemeProvider } from 'styled-components';
+import Theme from './theme/Theme';
 import GlobalStyle from './theme/GlobalStyle';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <Header />
-    <App />
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <Header />
+      <App />
+    </ThemeProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
