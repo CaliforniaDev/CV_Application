@@ -5,6 +5,7 @@ import NunitoSansRegular from "../assets/fonts/NunitoSans-Regular.woff";
 import NunitoSansBold from '../assets/fonts/NunitoSans-Bold.woff';
 
 const GlobalStyle = createGlobalStyle `
+
 @font-face {
     font-family: "Nunito Sans";
     src: url(${NunitoSansExtraLight}) format("woff");
@@ -54,29 +55,33 @@ body {
     font-size: 1.6rem;
     margin: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5em;
+}
 h1 {
     font-size: 5.6rem;
-    line-height: 7.2rem;
 }
 
 h2 {
     font-size: 4rem;
-    line-height: 5.6rem;
 }
 
 h3 {
     font-size: 3.2rem;
-    line-height: 4rem;
 }
 
 h4 {
     font-size: 2.4rem;
-    line-height: 3.2rem;
 }
 h5 {
     font-size: 1.6rem;
-    font-weight: 700;
 }
+
 
 main {
     display: flex;
