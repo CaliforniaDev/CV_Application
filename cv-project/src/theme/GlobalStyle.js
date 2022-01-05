@@ -1,24 +1,31 @@
+import { createGlobalStyle } from "styled-components";
+import NunitoSansExtraLight from "../assets/fonts/NunitoSans-ExtraLight.woff";
+import NunitoSansLight from "../assets/fonts/NunitoSans-Light.woff";
+import NunitoSansRegular from "../assets/fonts/NunitoSans-Regular.woff";
+import NunitoSansBold from '../assets/fonts/NunitoSans-Bold.woff';
+
+const GlobalStyle = createGlobalStyle `
 @font-face {
     font-family: "Nunito Sans";
-    src: url("../assets/fonts/NunitoSans-ExtraLight.woff") format("woff");
+    src: url(${NunitoSansExtraLight}) format("woff");
     font-weight: 200;
     font-style: normal;
 }
 @font-face {
     font-family: "Nunito Sans";
-    src: url("../assets/fonts/NunitoSans-Light.woff") format("woff");
+    src: url(${NunitoSansLight}) format("woff");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: "Nunito Sans";
-    src: url("../assets/fonts/NunitoSans-Regular.woff") format("woff");
+    src: url(${NunitoSansRegular}) format("woff");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "Nunito Sans";
-    src: url("../assets/fonts/NunitoSans-Bold.woff") format("woff");
+    src: url(${NunitoSansBold}) format("woff");
     font-weight: bold;
     font-style: normal;
 }
@@ -76,3 +83,6 @@ main {
     flex-direction: column;
     align-items: center;
 }
+`
+
+export default GlobalStyle;

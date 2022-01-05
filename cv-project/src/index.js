@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from "../src/components/Header";
-import 'normalize.css';
-import './styles/GlobalStyles.scss';
+import GlobalStyle from './theme/GlobalStyle';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <Header />
     <App />
   </React.StrictMode>,
