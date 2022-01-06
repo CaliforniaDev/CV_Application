@@ -1,8 +1,6 @@
-import styles from '../../styles/CVPreview.module.scss';
-
 const ExperienceItem = ({ experienceItem }) => {
     return (
-        <div className={styles.experienceItemsWrapper}>
+        <div>
             <h4>Experience</h4>
             <div>
                 <p>{experienceItem.company}</p>
