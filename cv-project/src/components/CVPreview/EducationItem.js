@@ -1,5 +1,3 @@
-import styles from '../../styles/CVPreview.module.scss';
-
 const EducationItem = ({ educationItem }) => {
     const {
         school,
@@ -11,7 +9,7 @@ const EducationItem = ({ educationItem }) => {
         to
     } = educationItem;
     return (
-        <div className={styles.educationItemWrapper}>
+        <div>
             <p>{school}</p>
             <p>Degree: {degree}</p>
             <p>Subject: {subject}</p>
