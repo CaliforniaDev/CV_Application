@@ -5,7 +5,6 @@ import Education from './Education';
 import Skills from './Skills';
 import Button from '../Utils/Button';
 import styles from '../../styles/CVForm.module.scss';
-import styledButton from '../../styles/Button.module.scss';
 
 class CVForm extends React.Component {
     constructor(props) {
@@ -57,14 +56,14 @@ class CVForm extends React.Component {
                      />
 
                      <Button
-                       name="Load Example"
-                       classNameProp={styledButton.loadExampleButton} 
+                       loadButton
+                       text="Load Example"
                        onClick={e => handleLoadExample(e)}
                      />
                      <Button
-                       name="Reset"
-                       classNameProp={styledButton.resetButton}
-                       onClick={e => handleReset(e)} 
+                       resetButton 
+                       text="Reset"
+                       onClick={e => handleReset(e)}
                      />
                 </form>
             </div>

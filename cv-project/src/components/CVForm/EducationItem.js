@@ -1,6 +1,5 @@
 import Button from "../Utils/Button";
 import styles from "../../styles/Education.module.scss";
-import styledButton from "../../styles/Button.module.scss";
 
 
 const EducationItem = ({ educationItem, id, onChangeEducation, deleteItem }) => {
@@ -56,8 +55,8 @@ const EducationItem = ({ educationItem, id, onChangeEducation, deleteItem }) => 
             />
 
             <Button
-              name="Delete"
-              classNameProp={styledButton.deleteButton}
+              deleteButton
+              text="Delete"
               onClick={e => deleteItem(e, id)}
             />
 

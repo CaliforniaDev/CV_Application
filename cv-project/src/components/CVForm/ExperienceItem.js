@@ -1,5 +1,4 @@
 import styles from '../../styles/Experience.module.scss';
-import styledButton from '../../styles/Button.module.scss';
 import Button from '../Utils/Button';
 
 const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
@@ -48,9 +47,9 @@ const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
         placeholder='To'
       />
       <Button
-        classNameProp={styledButton.deleteButton}
+        deleteButton
+        text="Delete"
         onClick={(e) => deleteItem(e, id)}
-        name="Delete"
       />
     </div>
   )

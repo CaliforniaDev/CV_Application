@@ -2,7 +2,6 @@ import React from "react";
 import Button from '../Utils/Button';
 import SkillsItems from "./SkillsItems";
 import styles from '../../styles/Skills.module.scss';
-import styledButton from '../../styles/Button.module.scss';
 
 class Skills extends React.Component {
     constructor(props) {
@@ -26,9 +25,9 @@ class Skills extends React.Component {
                 <h4>Skills</h4>
                 {skillItem}
                 <Button 
+                  addButton
+                  text='Add' 
                   onClick={e => handleAddSkill(e)}
-                  classNameProp={styledButton.addButton}
-                  name='Add' 
                 />
             </section>
         )

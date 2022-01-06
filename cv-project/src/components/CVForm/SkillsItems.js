@@ -1,7 +1,5 @@
 import Button from '../Utils/Button';
 import styles from '../../styles/Skills.module.scss';
-import styledButton from '../../styles/Button.module.scss';
-
 const SkillsItems = ({ skillItem, id, onChange, deleteItem }) => {
     return (
         <div className={styles.wrapper}>
@@ -13,9 +11,9 @@ const SkillsItems = ({ skillItem, id, onChange, deleteItem }) => {
             />
 
             <Button
+              deleteButton
+              text='Delete'
               onClick={e => deleteItem(e, id)}
-              classNameProp={styledButton.deleteButton}
-              name='Delete'
             />
         </div>
     );
