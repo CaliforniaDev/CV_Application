@@ -1,24 +1,24 @@
 import styled, { css } from "styled-components";
 
-const Button = ({ 
-    text, 
-    onClick,
-    addButton,
-    deleteButton,
-    loadButton,  
-    resetButton 
+const Button = ({
+  text,
+  onClick,
+  addButton,
+  deleteButton,
+  loadButton,
+  resetButton
 }) => {
-    return (
-        <ButtonWrapper
-          onClick={onClick}
-          addButton={addButton}
-          deleteButton={deleteButton}
-          loadButton={loadButton}
-          resetButton={resetButton}
-        >
-            {text}
-        </ButtonWrapper>
-    )
+  return (
+    <ButtonWrapper
+      onClick={onClick}
+      addButton={addButton}
+      deleteButton={deleteButton}
+      loadButton={loadButton}
+      resetButton={resetButton}
+    >
+      {text}
+    </ButtonWrapper>
+  )
 }
 const ButtonWrapper = styled.button`
     padding: 1.2rem 2.4rem;

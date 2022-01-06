@@ -5,24 +5,24 @@ import styled from "styled-components";
 
 
 class CVPreview extends React.Component {
-    constructor(props){
-        super();
-    }
+  constructor(props) {
+    super();
+  }
 
-    render() {
-        const { state } = this.props;
-        return (
-            <CVPreviewContainer>
-            <CVHeader personalInfo={state.personalInfo}/>
-            <CVBody
-              personalInfo={state.personalInfo}
-              experience={state.experience}
-              education={state.education}
-              skills={state.skills} 
-            />
-            </CVPreviewContainer>
-        )
-    }
+  render() {
+    const { state } = this.props;
+    return (
+      <CVPreviewContainer>
+        <CVHeader personalInfo={state.personalInfo} />
+        <CVBody
+          personalInfo={state.personalInfo}
+          experience={state.experience}
+          education={state.education}
+          skills={state.skills}
+        />
+      </CVPreviewContainer>
+    )
+  }
 }
 
 const CVPreviewContainer = styled.div`

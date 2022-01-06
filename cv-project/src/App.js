@@ -14,10 +14,10 @@ class App extends React.Component {
         firstName: '',
         lastName: '',
         title: '',
-        address:'',
-        city:'',
+        address: '',
+        city: '',
         state: '',
-        zipCode:'',
+        zipCode: '',
         email: '',
         phoneNumber: '',
         website: '',
@@ -68,30 +68,30 @@ class App extends React.Component {
     const { name, value } = e.target;
     this.setState(state => ({
       experience: state.experience.map(experienceItem => {
-        return (experienceItem.id === id) ? 
-        { ...experienceItem, [name]: value }
-        : experienceItem;
+        return (experienceItem.id === id) ?
+          { ...experienceItem, [name]: value }
+          : experienceItem;
       }),
     }))
   }
-  
+
   onChangeEducation = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       education: state.education.map(educationItem => {
-        return (educationItem.id === id) ? 
-        { ...educationItem, [name]: value } 
-        : educationItem;
+        return (educationItem.id === id) ?
+          { ...educationItem, [name]: value }
+          : educationItem;
       }),
     }))
   }
   onChangeSkills = (e, id) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     this.setState(state => ({
       skills: state.skills.map(skillItem => {
-        return (skillItem.id === id) ? 
-        { ...skillItem, [name]: value }
-        : skillItem;
+        return (skillItem.id === id) ?
+          { ...skillItem, [name]: value }
+          : skillItem;
       }),
     }))
   }
@@ -135,7 +135,7 @@ class App extends React.Component {
       skill: ''
     }
     this.setState(state => ({
-      skills: [ ...state.skills, newSkillItem ]
+      skills: [...state.skills, newSkillItem]
     }))
   }
 
@@ -164,7 +164,7 @@ class App extends React.Component {
     e.preventDefault();
     this.setState(exampleCV)
   }
-  
+
 
   handleReset = e => {
     e.preventDefault();
@@ -194,7 +194,7 @@ class App extends React.Component {
           handleReset={this.handleReset}
         />
         <CVPreview
-        state={this.state} 
+          state={this.state}
         />
       </main>
     )

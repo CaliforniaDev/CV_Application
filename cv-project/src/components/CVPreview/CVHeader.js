@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const CVHeader = ({ personalInfo }) => {
-    const { firstName, lastName, title } = personalInfo;
-    return (
-        <CVHeaderWrapper>
-                <h1>{firstName} {lastName}</h1>
-                <h3>{title}</h3>
-        </CVHeaderWrapper>
-    )
+  const { firstName, lastName, title } = personalInfo;
+  return (
+    <CVHeaderWrapper>
+      <h1>{firstName} {lastName}</h1>
+      <h3>{title}</h3>
+    </CVHeaderWrapper>
+  )
 }
 
 const CVHeaderWrapper = styled.header`
