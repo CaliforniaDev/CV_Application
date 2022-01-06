@@ -2,7 +2,7 @@ import React from "react";
 import CVHeader from "./CVHeader";
 import CVBody from "./CVBody";
 import styled from "styled-components";
-import styles from '../../styles/CVPreview.module.scss';
+
 
 class CVPreview extends React.Component {
     constructor(props){
