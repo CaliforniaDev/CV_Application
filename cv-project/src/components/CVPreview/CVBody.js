@@ -1,4 +1,4 @@
-import styles from "../../styles/CVPreview.module.scss";
+import styled from "styled-components";
 import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem"
 import Skills from './Skills';
@@ -31,11 +31,14 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
     })
 
     return (
-        <div>
-            
-        </div>
+        <BodyContainer>
+            <h4>Phone</h4>
+        </BodyContainer>
     );
 }
+const BodyContainer = styled.div`
+    border: 1px solid ${({ theme }) => theme.colors.secondaryLight}
+`;
 
 
 
