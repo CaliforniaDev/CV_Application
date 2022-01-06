@@ -10,6 +10,17 @@ $gray-background: #444;
     padding: 1.2rem 2.4rem;
     font-size: 2rem;
 }
+
+.previewContainer{
+    display: grid;
+    grid-template-columns: 70mm 140mm;
+    grid-template-rows: 50mm 247mm;
+    width: 210mm;
+    height: 297mm;
+    background: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 h4 {
     color: $dark-font;
     font-weight: bold;
@@ -22,25 +33,4 @@ p {
     font-size: 1.6rem;
     color: $dark-font;
 }
-h1 {
-    font-weight: 200;
-    line-height: 5.2rem;
-    margin: 0;
-}
-h3 {
-    font-size: 2.4rem;
-    font-weight: 300;
-}
-.previewContainer{
-    display: grid;
-    grid-template-columns: 70mm 140mm;
-    grid-template-rows: 50mm 247mm;
-    width: 210mm;
-    height: 297mm;
-    background: #f8f8f8;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-
-
 
