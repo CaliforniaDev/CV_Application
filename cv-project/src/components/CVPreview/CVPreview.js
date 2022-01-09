@@ -1,5 +1,6 @@
 import React from "react";
 import CVHeader from "./CVHeader";
+import Sidebar from "./Sidebar";
 import CVBody from "./CVBody";
 import styled from "styled-components";
 
@@ -14,6 +15,7 @@ class CVPreview extends React.Component {
     return (
       <CVPreviewContainer>
         <CVHeader personalInfo={state.personalInfo} />
+        <Sidebar personalInfo={state.personalInfo} skills={state.skills}/>
         <CVBody
           personalInfo={state.personalInfo}
           experience={state.experience}
