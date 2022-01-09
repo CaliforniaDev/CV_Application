@@ -1,4 +1,5 @@
 import React from "react";
+import TextArea from "../Utils/TextArea";
 import styles from "../../styles/Personal.module.scss";
 
 class Personal extends React.Component {
@@ -82,14 +83,12 @@ class Personal extends React.Component {
             placeholder="Website"
           />
 
-          <textarea
+          <TextArea
             onChange={handleChange}
             value={personalInfo.description}
             name="description"
             placeholder="Description"
-          >
-
-          </textarea>
+          />
 
         </div>
 
