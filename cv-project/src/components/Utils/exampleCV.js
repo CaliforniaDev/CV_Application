@@ -14,7 +14,7 @@ const exampleCV = {
     phoneNumber: '555-555-555',
     website: 'www.johndoe.com',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      'I found my purpose the moment my hands landed on acomputer. Web Developement has been my passion for many years. I have a burning passion to deliver compelling interactive web experiences. Below are projects that showcase some of my skills and background in developing software.'
   },
   experience: [
     {
@@ -25,6 +25,15 @@ const exampleCV = {
       state: 'CA',
       from: '2020',
       to: '2021'
+    },
+    {
+      id: uuidv4(),
+      position: 'Web Developer',
+      company: 'Cup Kayz',
+      city: 'Riverside',
+      state: 'CA',
+      from: '2015',
+      to: '2019'
     }
   ],
   education: [
