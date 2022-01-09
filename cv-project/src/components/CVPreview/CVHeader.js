@@ -14,18 +14,20 @@ const CVHeaderWrapper = styled.header`
     background: ${({ theme }) => theme.colors.dark};
     color: ${({ theme }) => theme.colors.light};
     grid-column: span 2;
-    padding-left: 4rem;
+    align-items: center;
     margin: 0;
     justify-content: center;
     display: flex;
     flex-direction: column;
 
     h1 {
-        font-weight: 200;
+        font-weight: 300;
+        text-transform: uppercase;
     }
     h3 {
         font-size: 2.4rem;
-        font-weight: 300;
+        font-weight: 400;
+        text-transform: uppercase;
     }
 `
 
