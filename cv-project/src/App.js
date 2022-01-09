@@ -31,7 +31,8 @@ class App extends React.Component {
           city: '',
           state: '',
           from: '',
-          to: ''
+          to: '',
+          description: ''
         }
       ],
       education: [
