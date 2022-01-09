@@ -1,25 +1,19 @@
 import styled from "styled-components";
 import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem"
-import Skills from './Skills';
+import Section from "../Utils/Section";
+import SubSection from "../Utils/SubSection";
 
 
-const CVBody = ({ personalInfo, experience, education, skills }) => {
-  const experimentItems = experience.map(experienceItem => {
+const CVBody = ({ personalInfo, experience, education }) => {
+  const experienceItems = experience.map(experienceItem => {
     return <ExperienceItem
       key={experienceItem.id}
       experienceItem={experienceItem}
     />
   })
+  console.log(experienceItems);
 
-  const skillItems = skills.map(skillItem => {
-    return (
-      <Skills
-        key={skillItem.id}
-        skillItem={skillItem}
-      />
-    )
-  })
 
   const educationItem = education.map(educationItem => {
     return (
@@ -31,17 +25,26 @@ const CVBody = ({ personalInfo, experience, education, skills }) => {
   })
 
   return (
-    <BodyContainer>
-      <h4>Phone</h4>
-
-    </BodyContainer>
+    <CVBodyWrapper>
+      <Section title="Profile">
+      <Description>{personalInfo.description}</Description>
+    </Section>
+    <Section title="Experience">
+      {experienceItems}
+    </Section>
+    </CVBodyWrapper>
+    
   );
 }
-const BodyContainer = styled.div`
-    border: 1px solid ${({ theme }) => theme.colors.secondaryLight};
-    h4 {
-        text-transform: uppercase;
-    }
+const CVBodyWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Description = styled.div`
+text-align: left;
+border-bottom: 1px solid #333;
+padding-bottom: 2rem;
 `;
 
 
