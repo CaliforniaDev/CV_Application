@@ -1,5 +1,6 @@
 import styles from '../../styles/Experience.module.scss';
 import Button from '../Utils/Button';
+import TextArea from '../Utils/TextArea';
 
 const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
 
@@ -45,6 +46,13 @@ const ExperienceItem = ({ experienceItem, id, onChange, deleteItem }) => {
         onChange={e => onChange(e, id)}
         type='text' name='to'
         placeholder='To'
+      />
+
+      <TextArea
+        name="description"
+        value={experienceItem.description}
+        onChange={e => onChange(e, id)}
+        placeholder="Description" 
       />
       <Button
         deleteButton
