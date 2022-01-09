@@ -62,6 +62,7 @@ h4,
 h5,
 h6 {
     line-height: 1.5em;
+    letter-spacing: 2px;
 }
 h1 {
     font-size: 5.6rem;
@@ -76,7 +77,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 h5 {
     font-size: 1.6rem;
