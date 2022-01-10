@@ -25,9 +25,7 @@ const ExperienceItem = ({ experienceItem }) => {
   );
 }
 const ExperienceWrapper = styled.div`
-display: flex;
-flex-direction: column;
-margin: 1rem 0;
+  margin: 1rem 0;
 
 h4 {
   font-size: 1.6rem;
