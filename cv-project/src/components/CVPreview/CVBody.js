@@ -26,24 +26,23 @@ const CVBody = ({ personalInfo, experience, education }) => {
   return (
     <CVBodyWrapper>
       <Section title="Profile">
-      <Description>{personalInfo.description}</Description>
-    </Section>
-    <Section title="Experience">
-      {experienceItems}
-    </Section>
+        <Description>{personalInfo.description}</Description>
+      </Section>
+      <Section title="Experience">
+        {experienceItems}
+      </Section>
     </CVBodyWrapper>
-    
+
   );
 }
 const CVBodyWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
+    padding: 2rem;
 `;
 
 const Description = styled.div`
-text-align: left;
-border-bottom: 1px solid #333;
-padding-bottom: 2rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2rem;
 `;
 
 
