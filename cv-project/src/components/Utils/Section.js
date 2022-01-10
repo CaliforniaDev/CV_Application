@@ -3,11 +3,12 @@ import styled, { css } from "styled-components";
 
 const Section = ({
   title,
-  children
+  children,
+  padding,
 }) => {
 
   return (
-    <SectionWrapper>
+    <SectionWrapper padding={padding}>
       <Title>{title}</Title>
       {children}
     </SectionWrapper>
@@ -15,8 +16,11 @@ const Section = ({
 }
 
 const SectionWrapper = styled.section`
-  margin: 2rem 3rem 0 3rem;
-  color: ${({ theme }) => theme.colors.dark}
+  display: flex;
+  flex-direction: column;
+  padding: ${props => props.padding};
+  color: ${({ theme }) => theme.colors.dark};
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h3`
