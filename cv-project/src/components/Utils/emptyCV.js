@@ -5,6 +5,7 @@ const emptyCV = {
     firstName: '',
     lastName: '',
     title: '',
+    photo: '',
     address: '',
     city: '',
     state: '',
@@ -22,7 +23,8 @@ const emptyCV = {
       city: '',
       state: '',
       from: '',
-      to: ''
+      to: '',
+      description: ''
     }
   ],
   education: [

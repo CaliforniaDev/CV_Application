@@ -14,6 +14,7 @@ class App extends React.Component {
         firstName: '',
         lastName: '',
         title: '',
+        photo: '',
         address: '',
         city: '',
         state: '',

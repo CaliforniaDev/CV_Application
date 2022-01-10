@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import examplePhoto from '../../assets/images/confused-black-man.jpeg';
 
 
 const exampleCV = {
@@ -6,6 +7,7 @@ const exampleCV = {
     firstName: 'John',
     lastName: 'Doe',
     title: 'Web Developer / UX & UI Designer',
+    photo: examplePhoto,
     address: '123 Sasame St',
     city: 'Alphabet',
     state: 'CA',
@@ -41,11 +43,11 @@ const exampleCV = {
   education: [
     {
       id: uuidv4(),
-      school: 'Devry',
-      city: 'Santa Monica',
+      school: 'University of Riverside',
+      city: 'Riverside',
       state: 'CA',
-      degree: 'Computer Science',
-      subject: 'Bachelors',
+      degree: 'Bachelors',
+      subject: 'Computer Science',
       from: '2009',
       to: '2014'
     }
