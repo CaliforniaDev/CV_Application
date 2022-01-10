@@ -24,7 +24,8 @@ const exampleCV = {
       city: 'Eastvale',
       state: 'CA',
       from: '2020',
-      to: '2021'
+      to: '2021',
+      description: "Responsive Wordpress portfolio site. Developed with intentions to promote a small business product branding team. Nybblebox was built on the focus that product design was key to a business success. Clean modern and thoughtful designs. "
     },
     {
       id: uuidv4(),
@@ -33,7 +34,8 @@ const exampleCV = {
       city: 'Riverside',
       state: 'CA',
       from: '2015',
-      to: '2019'
+      to: '2019',
+      description: "Developed a Responsive E-Commerce Web App utilizing HTML5, CSS3, and JavaScript programing languages. Google API is used to render map points between delivery and recipient. Written in modern, performant, maintainable code. Crafted interactive wireframes before coding using Adobe XD."
     }
   ],
   education: [
