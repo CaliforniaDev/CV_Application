@@ -15,7 +15,11 @@ class CVPreview extends React.Component {
     return (
       <CVPreviewContainer>
         <CVHeader personalInfo={state.personalInfo} />
-        <Sidebar personalInfo={state.personalInfo} skills={state.skills}/>
+        <Sidebar 
+          personalInfo={state.personalInfo}
+          education={state.education} 
+          skills={state.skills}
+        />
         <CVBody
           personalInfo={state.personalInfo}
           experience={state.experience}
