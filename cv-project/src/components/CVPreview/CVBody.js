@@ -12,7 +12,6 @@ const CVBody = ({ personalInfo, experience, education }) => {
       experienceItem={experienceItem}
     />
   })
-  console.log(experienceItems);
 
 
   const educationItem = education.map(educationItem => {

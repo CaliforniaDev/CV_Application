@@ -12,10 +12,9 @@ const ExperienceItem = ({ experienceItem }) => {
     description 
   } = experienceItem;
 
-  console.log(description)
   const experienceTitle = `${company} | ${position} ${from}-${to} `;
   const subTitle = `${city}, ${state} | ${from}-${to}`;
-  console.log(experienceTitle);
+  
   return (
     <ExperienceWrapper>
       <SubSection title={experienceTitle} secondaryTitle={subTitle}>
