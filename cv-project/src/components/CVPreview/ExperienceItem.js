@@ -8,19 +8,18 @@ const ExperienceItem = ({ experienceItem }) => {
     city, 
     state, 
     from, 
-    to 
+    to,
+    description 
   } = experienceItem;
 
+  console.log(description)
   const experienceTitle = `${company} | ${position} ${from}-${to} `;
   const subTitle = `${city}, ${state} | ${from}-${to}`;
   console.log(experienceTitle);
   return (
     <ExperienceWrapper>
       <SubSection title={experienceTitle} secondaryTitle={subTitle}>
-        <p> Developed a Responsive E-Commerce Web App utilizing
-HTML5, CSS3, and JavaScript programing languages. Google
-API is used to render map points between delivery and recipient. Written in modern, performant, maintainable code. Crafted
-interactive wireframes before coding using Adobe XD. </p>
+        {description}
       </SubSection>
     </ExperienceWrapper>
 
