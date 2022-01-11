@@ -31,8 +31,6 @@ const emptyCV = {
     {
       id: uuidv4(),
       school: '',
-      city: '',
-      state: '',
       degree: '',
       subject: '',
       from: '',

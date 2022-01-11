@@ -4,8 +4,6 @@ import SubSection from "../Utils/SubSection";
 const EducationItem = ({ educationItem }) => {
   const {
     school,
-    city,
-    state,
     degree,
     subject,
     from,

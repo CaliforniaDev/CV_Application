@@ -40,8 +40,6 @@ class App extends React.Component {
         {
           id: uuidv4(),
           school: '',
-          city: '',
-          state: '',
           degree: '',
           subject: '',
           from: '',

@@ -44,8 +44,6 @@ const exampleCV = {
     {
       id: uuidv4(),
       school: 'University of Riverside',
-      city: 'Riverside',
-      state: 'CA',
       degree: 'Bachelors',
       subject: 'Computer Science',
       from: '2009',
