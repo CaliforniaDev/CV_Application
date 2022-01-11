@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import ExperienceItem from "./ExperienceItem";
-import EducationItem from "./EducationItem"
 import Section from "../Utils/Section";
-import SubSection from "../Utils/SubSection";
 
 
 const CVBody = ({ personalInfo, experience, education }) => {
@@ -12,17 +10,6 @@ const CVBody = ({ personalInfo, experience, education }) => {
       experienceItem={experienceItem}
     />
   })
-
-
-  const educationItem = education.map(educationItem => {
-    return (
-      <EducationItem
-        key={educationItem.id}
-        educationItem={educationItem}
-      />
-    )
-  })
-
   return (
     <CVBodyWrapper>
       <Section title="Profile">
