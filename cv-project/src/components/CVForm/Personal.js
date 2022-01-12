@@ -1,5 +1,6 @@
 import React from "react";
 import TextArea from "../Utils/TextArea";
+import FileInput from "../Utils/FIleInput";
 import styles from "../../styles/Personal.module.scss";
 
 class Personal extends React.Component {
@@ -32,6 +33,12 @@ class Personal extends React.Component {
             value={personalInfo.title}
             type='text' name='title'
             placeholder="Title"
+          />
+
+          <FileInput 
+            onChange={handleChange}
+            value={personalInfo.photo}
+            name="photo" label="Photo" 
           />
 
           <input

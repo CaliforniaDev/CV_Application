@@ -55,14 +55,39 @@ class App extends React.Component {
     }
   }
 
+  
   handleChangePersonal = e => {
+    const {name, value, type} = e.target;
+    if (type === "file"){
+      this.handleChangeFile(e)
+    }
+  
     this.setState(state => ({
       personalInfo: {
         ...state.personalInfo,
-        [e.target.name]: e.target.value
+        [name]: value
       },
     }));
   }
+
+  handleChangeFile = e => {
+    const { name } = e.target;
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.setState(state => ({
+        personalInfo: {
+          ...state.personalInfo,
+          [name]: reader.result,
+        },
+      }))
+    }
+    reader.readAsDataURL(file);
+  }
+
+ 
 
   onChangeExperience = (e, id) => {
     const { name, value } = e.target;
@@ -173,6 +198,7 @@ class App extends React.Component {
 
 
   render() {
+    
     return (
       <main>
         <CVForm
@@ -200,4 +226,6 @@ class App extends React.Component {
     )
   }
 }
+
+
 export default App;
