@@ -54,7 +54,10 @@ class CVForm extends React.Component {
             handleAddSkill={handleAddSkill}
             handleDeleteSkill={handleDeleteSkill}
           />
-
+          <Button
+            pdfButton
+            text="Generate PDF"
+          />
           <Button
             loadButton
             text="Load Example"
