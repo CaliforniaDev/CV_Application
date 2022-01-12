@@ -58,12 +58,12 @@ class CVForm extends React.Component {
           <Button
             loadButton
             text="Load Example"
-            onClick={e => handleLoadExample(e)}
+            onClick={handleLoadExample}
           />
           <Button
             resetButton
             text="Reset"
-            onClick={e => handleReset(e)}
+            onClick={handleReset}
           />
         </form>
       </div>
