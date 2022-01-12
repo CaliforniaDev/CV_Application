@@ -14,10 +14,11 @@ class App extends React.Component {
         firstName: '',
         lastName: '',
         title: '',
-        address:'',
-        city:'',
+        photo: '',
+        address: '',
+        city: '',
         state: '',
-        zipCode:'',
+        zipCode: '',
         email: '',
         phoneNumber: '',
         website: '',
@@ -31,15 +32,14 @@ class App extends React.Component {
           city: '',
           state: '',
           from: '',
-          to: ''
+          to: '',
+          description: ''
         }
       ],
       education: [
         {
           id: uuidv4(),
           school: '',
-          city: '',
-          state: '',
           degree: '',
           subject: '',
           from: '',
@@ -55,43 +55,68 @@ class App extends React.Component {
     }
   }
 
+  
   handleChangePersonal = e => {
+    const {name, value, type} = e.target;
+    if (type === "file"){
+      this.handleChangeFile(e)
+    }
+  
     this.setState(state => ({
       personalInfo: {
         ...state.personalInfo,
-        [e.target.name]: e.target.value
+        [name]: value
       },
     }));
   }
+
+  handleChangeFile = e => {
+    const { name } = e.target;
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.setState(state => ({
+        personalInfo: {
+          ...state.personalInfo,
+          [name]: reader.result,
+        },
+      }))
+    }
+    reader.readAsDataURL(file);
+  }
+
+ 
 
   onChangeExperience = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       experience: state.experience.map(experienceItem => {
-        return (experienceItem.id === id) ? 
-        { ...experienceItem, [name]: value }
-        : experienceItem;
+        return (experienceItem.id === id) ?
+          { ...experienceItem, [name]: value }
+          : experienceItem;
       }),
     }))
   }
-  
+
   onChangeEducation = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       education: state.education.map(educationItem => {
-        return (educationItem.id === id) ? 
-        { ...educationItem, [name]: value } 
-        : educationItem;
+        return (educationItem.id === id) ?
+          { ...educationItem, [name]: value }
+          : educationItem;
       }),
     }))
   }
   onChangeSkills = (e, id) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     this.setState(state => ({
       skills: state.skills.map(skillItem => {
-        return (skillItem.id === id) ? 
-        { ...skillItem, [name]: value }
-        : skillItem;
+        return (skillItem.id === id) ?
+          { ...skillItem, [name]: value }
+          : skillItem;
       }),
     }))
   }
@@ -135,7 +160,7 @@ class App extends React.Component {
       skill: ''
     }
     this.setState(state => ({
-      skills: [ ...state.skills, newSkillItem ]
+      skills: [...state.skills, newSkillItem]
     }))
   }
 
@@ -164,7 +189,7 @@ class App extends React.Component {
     e.preventDefault();
     this.setState(exampleCV)
   }
-  
+
 
   handleReset = e => {
     e.preventDefault();
@@ -173,6 +198,7 @@ class App extends React.Component {
 
 
   render() {
+    
     return (
       <main>
         <CVForm
@@ -194,10 +220,12 @@ class App extends React.Component {
           handleReset={this.handleReset}
         />
         <CVPreview
-        state={this.state} 
+          state={this.state}
         />
       </main>
     )
   }
 }
+
+
 export default App;
