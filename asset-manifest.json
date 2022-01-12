@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/CV_Application/static/css/main.1f0c994b.css",
-    "main.js": "/CV_Application/static/js/main.bcf5e14f.js",
+    "main.css": "/CV_Application/static/css/main.6e72bfc3.css",
+    "main.js": "/CV_Application/static/js/main.19c2c12e.js",
     "static/js/787.1b963e06.chunk.js": "/CV_Application/static/js/787.1b963e06.chunk.js",
+    "static/media/confused-black-man.jpeg": "/CV_Application/static/media/confused-black-man.cec5311071bbd98eee00.jpeg",
+    "static/media/NunitoSans-Bold.woff": "/CV_Application/static/media/NunitoSans-Bold.f03343483c79d91a8067.woff",
+    "static/media/NunitoSans-Regular.woff": "/CV_Application/static/media/NunitoSans-Regular.b033241c7accdd778274.woff",
+    "static/media/NunitoSans-Light.woff": "/CV_Application/static/media/NunitoSans-Light.8941545abd15df45fc64.woff",
+    "static/media/NunitoSans-ExtraLight.woff": "/CV_Application/static/media/NunitoSans-ExtraLight.4bafb8351b37d6188c18.woff",
     "index.html": "/CV_Application/index.html",
-    "main.1f0c994b.css.map": "/CV_Application/static/css/main.1f0c994b.css.map",
-    "main.bcf5e14f.js.map": "/CV_Application/static/js/main.bcf5e14f.js.map",
+    "main.6e72bfc3.css.map": "/CV_Application/static/css/main.6e72bfc3.css.map",
+    "main.19c2c12e.js.map": "/CV_Application/static/js/main.19c2c12e.js.map",
     "787.1b963e06.chunk.js.map": "/CV_Application/static/js/787.1b963e06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f0c994b.css",
-    "static/js/main.bcf5e14f.js"
+    "static/css/main.6e72bfc3.css",
+    "static/js/main.19c2c12e.js"
   ]
 }
