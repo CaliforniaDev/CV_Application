@@ -5,6 +5,7 @@ const Button = ({
   onClick,
   addButton,
   deleteButton,
+  pdfButton,
   loadButton,
   resetButton
 }) => {
@@ -13,6 +14,7 @@ const Button = ({
       onClick={onClick}
       addButton={addButton}
       deleteButton={deleteButton}
+      pdfButton={pdfButton}
       loadButton={loadButton}
       resetButton={resetButton}
     >
@@ -50,6 +52,18 @@ const ButtonWrapper = styled.button`
 
       &:active {
           background: ${({ theme }) => theme.colors.deleteButton};
+      }
+    `}
+
+    ${props => props.pdfButton && css`
+      background: ${({ theme }) => theme.colors.pdfButton};
+
+      &:hover {
+        background: ${({ theme }) => theme.colors.pdfHover};
+      }
+
+      &:active {
+        background: ${({ theme }) => theme.colors.pdfButton};
       }
     `}
 
