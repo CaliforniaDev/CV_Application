@@ -50,7 +50,7 @@ html {
     -moz-box-sizing: inherit;
 }
 
-body {
+body, textarea {
     font-family: 'Nunito Sans';
     font-size: 1.6rem;
     margin: 0;
