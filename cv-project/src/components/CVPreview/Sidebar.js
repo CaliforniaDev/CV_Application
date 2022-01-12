@@ -1,6 +1,5 @@
 import ContactInfo from "./ContactInfo";
 import Skills from "./Skills";
-import Section from "../Utils/Section";
 import EducationItem from "./EducationItem";
 import styled from "styled-components";
 
@@ -17,6 +16,9 @@ const Sidebar = ({ personalInfo, education, skills }) => {
 
   return (
     <SidebarWrapper>
+      <PhotoWrapper>
+        <Photo src={personalInfo.photo}/>
+      </PhotoWrapper>
       <ContactInfo personalInfo={personalInfo} />
       {educationItems}
       <Skills skills={skills} />
@@ -35,6 +37,14 @@ const SidebarWrapper = styled.div`
 `;
 
 const Photo = styled.img`
-
+object-fit: cover;
+height: 100%;
+margin-bottom: 2rem;
+`
+const PhotoWrapper = styled.div`
+display: flex;
+align-items: center;
+overflow: hidden;
+height: 32rem;
 `
 export default Sidebar;
