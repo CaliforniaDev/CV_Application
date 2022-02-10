@@ -8,6 +8,7 @@ import exampleCV from "./components/Utils/exampleCV";
 
 const App = () => {
   const [cv, setCv] = useState(emptyCV);
+  
   useEffect(() => console.log(cv), [cv]);
   
   const handleChangePersonal = e => {
@@ -156,25 +157,25 @@ const App = () => {
     return (
       <main>
         <CVForm
-          personalInfo={this.state.personalInfo}
-          experience={this.state.experience}
-          education={this.state.education}
-          skills={this.state.skills}
-          handleAddExperience={this.handleAddExperience}
-          handleAddEducation={this.handleAddEducation}
-          handleAddSkill={this.handleAddSkill}
-          handleDeleteExperience={this.handleDeleteExperience}
-          handleDeleteEducation={this.handleDeleteEducation}
-          handleDeleteSkill={this.handleDeleteSkill}
-          onChangeExperience={this.onChangeExperience}
-          onChangeEducation={this.onChangeEducation}
-          onChangeSkills={this.onChangeSkills}
-          handleChangePersonal={this.handleChangePersonal}
-          handleLoadExample={this.handleLoadExample}
-          handleReset={this.handleReset}
+          personalInfo={cv.personalInfo}
+          experience={cv.experience}
+          education={cv.education}
+          skills={cv.skills}
+          handleAddExperience={handleAddExperience}
+          handleAddEducation={handleAddEducation}
+          handleAddSkill={handleAddSkill}
+          handleDeleteExperience={handleDeleteExperience}
+          handleDeleteEducation={handleDeleteEducation}
+          handleDeleteSkill={handleDeleteSkill}
+          onChangeExperience={onChangeExperience}
+          onChangeEducation={onChangeEducation}
+          onChangeSkills={onChangeSkills}
+          handleChangePersonal={handleChangePersonal}
+          handleLoadExample={handleLoadExample}
+          handleReset={handleReset}
         />
         <CVPreview
-          state={this.state}
+          state={cv}
         />
       </main>
     )
