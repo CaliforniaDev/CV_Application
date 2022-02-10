@@ -7,18 +7,18 @@ import exampleCV from "./components/Utils/exampleCV";
 
 
 const App = () => {
-  const [cv, setCV] = useState(emptyCV);
-  useEffect(() => console.log(cv), []);
-  console.log(cv);
+  const [cv, setCv] = useState(emptyCV);
+  useEffect(() => console.log(cv), [cv]);
+  
   const handleChangePersonal = e => {
     const {name, value, type} = e.target;
     if (type === "file"){
       handleChangeFile(e)
     }
   
-    this.setState(state => ({
+    setCv(prevState => ({
       personalInfo: {
-        ...state.personalInfo,
+        ...prevState.personalInfo,
         [name]: value
       },
     }));
@@ -31,9 +31,9 @@ const App = () => {
 
     const reader = new FileReader();
     reader.onload = () => {
-      this.setState(state => ({
+      setCv(prevState => ({
         personalInfo: {
-          ...state.personalInfo,
+          ...prevState.personalInfo,
           [name]: reader.result,
         },
       }))
@@ -45,8 +45,8 @@ const App = () => {
 
   const onChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      experience: state.experience.map(experienceItem => {
+    setCv(prevState => ({
+      experience: prevState.experience.map(experienceItem => {
         return (experienceItem.id === id) ?
           { ...experienceItem, [name]: value }
           : experienceItem;
@@ -56,8 +56,8 @@ const App = () => {
 
   const onChangeEducation = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      education: state.education.map(educationItem => {
+    setCv(prevState => ({
+      education: prevState.education.map(educationItem => {
         return (educationItem.id === id) ?
           { ...educationItem, [name]: value }
           : educationItem;
@@ -66,8 +66,8 @@ const App = () => {
   }
   const onChangeSkills = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      skills: state.skills.map(skillItem => {
+    setCv(prevState => ({
+      skills: prevState.skills.map(skillItem => {
         return (skillItem.id === id) ?
           { ...skillItem, [name]: value }
           : skillItem;
@@ -86,8 +86,8 @@ const App = () => {
       from: '',
       to: '',
     }
-    this.setState(state => ({
-      experience: [...state.experience, newItem]
+    setCv(prevState => ({
+      experience: [...prevState.experience, newItem]
     }));
   }
 
@@ -103,8 +103,8 @@ const App = () => {
       from: '',
       to: ''
     }
-    this.setState(state => ({
-      education: [...state.education, newItem]
+    setCv(prevState => ({
+      education: [...prevState.education, newItem]
     }));
   }
   const handleAddSkill = (e) => {
@@ -113,41 +113,41 @@ const App = () => {
       id: uuidv4(),
       skill: ''
     }
-    this.setState(state => ({
-      skills: [...state.skills, newSkillItem]
+    setCv(prevState => ({
+      skills: [...prevState.skills, newSkillItem]
     }))
   }
 
   const handleDeleteExperience = (e, id) => {
     e.preventDefault();
-    this.setState(state => ({
-      experience: state.experience.filter(item => item.id !== id),
+    setCv(prevState => ({
+      experience: prevState.experience.filter(item => item.id !== id),
     }));
   }
 
   const handleDeleteEducation = (e, id) => {
     e.preventDefault();
-    this.setState(state => ({
-      education: state.education.filter(item => item.id !== id),
+    setCv(prevState => ({
+      education: prevState.education.filter(item => item.id !== id),
     }));
   }
 
   const handleDeleteSkill = (e, id) => {
     e.preventDefault()
-    this.setState(state => ({
-      skills: state.skills.filter(item => item.id !== id),
+    setCv(prevState => ({
+      skills: prevState.skills.filter(item => item.id !== id),
     }));
   }
 
   const handleLoadExample = e => {
     e.preventDefault();
-    this.setState(exampleCV)
+    setCv(exampleCV)
   }
 
 
   const handleReset = e => {
     e.preventDefault();
-    this.setState(emptyCV);
+    setCv(emptyCV);
   }
 
 
