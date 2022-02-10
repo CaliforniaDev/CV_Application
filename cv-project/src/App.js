@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
@@ -6,60 +6,14 @@ import emptyCV from "./components/Utils/emptyCV";
 import exampleCV from "./components/Utils/exampleCV";
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      personalInfo: {
-        firstName: '',
-        lastName: '',
-        title: '',
-        photo: '',
-        address: '',
-        city: '',
-        state: '',
-        zipCode: '',
-        email: '',
-        phoneNumber: '',
-        website: '',
-        description: ''
-      },
-      experience: [
-        {
-          id: uuidv4(),
-          position: '',
-          company: '',
-          city: '',
-          state: '',
-          from: '',
-          to: '',
-          description: ''
-        }
-      ],
-      education: [
-        {
-          id: uuidv4(),
-          school: '',
-          degree: '',
-          subject: '',
-          from: '',
-          to: ''
-        }
-      ],
-      skills: [
-        {
-          id: uuidv4(),
-          skill: ''
-        }
-      ]
-    }
-  }
-
-  
-  handleChangePersonal = e => {
+const App = () => {
+  const [cv, setCV] = useState(emptyCV);
+  useEffect(() => console.log(cv), []);
+  console.log(cv);
+  const handleChangePersonal = e => {
     const {name, value, type} = e.target;
     if (type === "file"){
-      this.handleChangeFile(e)
+      handleChangeFile(e)
     }
   
     this.setState(state => ({
@@ -70,7 +24,7 @@ class App extends React.Component {
     }));
   }
 
-  handleChangeFile = e => {
+  const handleChangeFile = e => {
     const { name } = e.target;
     const file = e.target.files[0];
     if (!file) return;
@@ -89,7 +43,7 @@ class App extends React.Component {
 
  
 
-  onChangeExperience = (e, id) => {
+  const onChangeExperience = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       experience: state.experience.map(experienceItem => {
@@ -100,7 +54,7 @@ class App extends React.Component {
     }))
   }
 
-  onChangeEducation = (e, id) => {
+  const onChangeEducation = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       education: state.education.map(educationItem => {
@@ -110,7 +64,7 @@ class App extends React.Component {
       }),
     }))
   }
-  onChangeSkills = (e, id) => {
+  const onChangeSkills = (e, id) => {
     const { name, value } = e.target;
     this.setState(state => ({
       skills: state.skills.map(skillItem => {
@@ -121,7 +75,7 @@ class App extends React.Component {
     }))
   }
 
-  handleAddExperience = e => {
+  const handleAddExperience = e => {
     e.preventDefault();
     const newItem = {
       id: uuidv4(),
@@ -137,7 +91,7 @@ class App extends React.Component {
     }));
   }
 
-  handleAddEducation = e => {
+  const handleAddEducation = e => {
     e.preventDefault();
     const newItem = {
       id: uuidv4(),
@@ -153,7 +107,7 @@ class App extends React.Component {
       education: [...state.education, newItem]
     }));
   }
-  handleAddSkill = (e) => {
+  const handleAddSkill = (e) => {
     e.preventDefault();
     const newSkillItem = {
       id: uuidv4(),
@@ -164,40 +118,40 @@ class App extends React.Component {
     }))
   }
 
-  handleDeleteExperience = (e, id) => {
+  const handleDeleteExperience = (e, id) => {
     e.preventDefault();
     this.setState(state => ({
       experience: state.experience.filter(item => item.id !== id),
     }));
   }
 
-  handleDeleteEducation = (e, id) => {
+  const handleDeleteEducation = (e, id) => {
     e.preventDefault();
     this.setState(state => ({
       education: state.education.filter(item => item.id !== id),
     }));
   }
 
-  handleDeleteSkill = (e, id) => {
+  const handleDeleteSkill = (e, id) => {
     e.preventDefault()
     this.setState(state => ({
       skills: state.skills.filter(item => item.id !== id),
     }));
   }
 
-  handleLoadExample = e => {
+  const handleLoadExample = e => {
     e.preventDefault();
     this.setState(exampleCV)
   }
 
 
-  handleReset = e => {
+  const handleReset = e => {
     e.preventDefault();
     this.setState(emptyCV);
   }
 
 
-  render() {
+
     
     return (
       <main>
@@ -225,7 +179,6 @@ class App extends React.Component {
       </main>
     )
   }
-}
 
 
 export default App;
