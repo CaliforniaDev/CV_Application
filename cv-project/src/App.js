@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import { useReactToPrint } from 'react-to-print';
 import { v4 as uuidv4 } from 'uuid';
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
@@ -8,10 +9,6 @@ import exampleCV from "./components/Utils/exampleCV";
 
 const App = () => {
   const [cv, setCv] = useState(emptyCV);
-  
-  useEffect(() => {
-    
-  });
   
   const handleChangePersonal = e => {
     const {name, value, type} = e.target;
@@ -156,6 +153,11 @@ const App = () => {
     setCv(emptyCV);
   }
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
 
 
     
@@ -178,10 +180,9 @@ const App = () => {
           handleChangePersonal={handleChangePersonal}
           handleLoadExample={handleLoadExample}
           handleReset={handleReset}
+          onPrint={handlePrint}
         />
-        <CVPreview
-          state={cv}
-        />
+        <CVPreview state={cv} ref={componentRef} />
       </main>
     )
   }
