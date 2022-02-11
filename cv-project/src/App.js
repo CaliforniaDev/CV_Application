@@ -9,15 +9,19 @@ import exampleCV from "./components/Utils/exampleCV";
 const App = () => {
   const [cv, setCv] = useState(emptyCV);
   
-  useEffect(() => console.log(cv), [cv]);
+  useEffect(() => {
+    
+  });
   
   const handleChangePersonal = e => {
     const {name, value, type} = e.target;
     if (type === "file"){
       handleChangeFile(e)
+      return
     }
   
     setCv(prevState => ({
+      ...prevState,
       personalInfo: {
         ...prevState.personalInfo,
         [name]: value
@@ -33,6 +37,7 @@ const App = () => {
     const reader = new FileReader();
     reader.onload = () => {
       setCv(prevState => ({
+        ...prevState,
         personalInfo: {
           ...prevState.personalInfo,
           [name]: reader.result,
