@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CV_Application/static/css/main.6e72bfc3.css",
-    "main.js": "/CV_Application/static/js/main.19c2c12e.js",
+    "main.js": "/CV_Application/static/js/main.ec52b72c.js",
     "static/js/787.1b963e06.chunk.js": "/CV_Application/static/js/787.1b963e06.chunk.js",
     "static/media/confused-black-man.jpeg": "/CV_Application/static/media/confused-black-man.cec5311071bbd98eee00.jpeg",
     "static/media/NunitoSans-Bold.woff": "/CV_Application/static/media/NunitoSans-Bold.f03343483c79d91a8067.woff",
@@ -10,11 +10,11 @@
     "static/media/NunitoSans-ExtraLight.woff": "/CV_Application/static/media/NunitoSans-ExtraLight.4bafb8351b37d6188c18.woff",
     "index.html": "/CV_Application/index.html",
     "main.6e72bfc3.css.map": "/CV_Application/static/css/main.6e72bfc3.css.map",
-    "main.19c2c12e.js.map": "/CV_Application/static/js/main.19c2c12e.js.map",
+    "main.ec52b72c.js.map": "/CV_Application/static/js/main.ec52b72c.js.map",
     "787.1b963e06.chunk.js.map": "/CV_Application/static/js/787.1b963e06.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e72bfc3.css",
-    "static/js/main.19c2c12e.js"
+    "static/js/main.ec52b72c.js"
   ]
 }
