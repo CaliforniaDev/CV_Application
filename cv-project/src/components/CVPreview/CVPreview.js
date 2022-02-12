@@ -5,13 +5,7 @@ import CVBody from "./CVBody";
 import styled from "styled-components";
 
 
-class CVPreview extends React.Component {
-  constructor(props) {
-    super();
-  }
-
-  render() {
-    const { state } = this.props;
+const CVPreview = ({ state }) => {
     return (
       <CVPreviewContainer>
         <CVHeader personalInfo={state.personalInfo} />
@@ -28,7 +22,6 @@ class CVPreview extends React.Component {
         />
       </CVPreviewContainer>
     )
-  }
 }
 
 const CVPreviewContainer = styled.div`

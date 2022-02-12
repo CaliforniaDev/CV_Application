@@ -1,6 +1,11 @@
 import Button from '../Utils/Button';
 import styles from '../../styles/Skills.module.scss';
-const SkillsItems = ({ skillItem, id, onChange, deleteItem }) => {
+const SkillsItems = ({
+  skillItem,
+  id,
+  onChange,
+  deleteItem
+}) => {
   return (
     <div className={styles.wrapper}>
       <input
