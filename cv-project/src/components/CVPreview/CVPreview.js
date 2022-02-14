@@ -6,9 +6,6 @@ import styled from "styled-components";
 
 class CVPreview extends React.Component {
   //Class component needed to use react to print
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { state } = this.props;
     return (
