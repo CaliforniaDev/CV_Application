@@ -6,10 +6,6 @@ import styled from "styled-components";
 
 
 class CVPreview extends React.Component {
-  constructor(props) {
-    super();
-  }
-
   render() {
     const { state } = this.props;
     return (
