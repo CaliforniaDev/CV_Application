@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { useReactToPrint } from 'react-to-print';
 import { v4 as uuidv4 } from 'uuid';
 import CVForm from "./components/CVForm/CVForm";
 import CVPreview from "./components/CVPreview/CVPreview";
@@ -6,80 +7,36 @@ import emptyCV from "./components/Utils/emptyCV";
 import exampleCV from "./components/Utils/exampleCV";
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      personalInfo: {
-        firstName: '',
-        lastName: '',
-        title: '',
-        photo: '',
-        address: '',
-        city: '',
-        state: '',
-        zipCode: '',
-        email: '',
-        phoneNumber: '',
-        website: '',
-        description: ''
-      },
-      experience: [
-        {
-          id: uuidv4(),
-          position: '',
-          company: '',
-          city: '',
-          state: '',
-          from: '',
-          to: '',
-          description: ''
-        }
-      ],
-      education: [
-        {
-          id: uuidv4(),
-          school: '',
-          degree: '',
-          subject: '',
-          from: '',
-          to: ''
-        }
-      ],
-      skills: [
-        {
-          id: uuidv4(),
-          skill: ''
-        }
-      ]
-    }
-  }
-
+const App = () => {
+  const [cv, setCv] = useState(emptyCV);
   
-  handleChangePersonal = e => {
+  const handleChangePersonal = e => {
     const {name, value, type} = e.target;
     if (type === "file"){
-      this.handleChangeFile(e)
+      handleChangeFile(e)
+      return
     }
   
-    this.setState(state => ({
+    setCv(prevState => ({
+      ...prevState,
       personalInfo: {
-        ...state.personalInfo,
+        ...prevState.personalInfo,
         [name]: value
       },
     }));
   }
 
-  handleChangeFile = e => {
+  const handleChangeFile = e => {
     const { name } = e.target;
     const file = e.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = () => {
-      this.setState(state => ({
+      setCv(prevState => ({
+        ...prevState,
         personalInfo: {
-          ...state.personalInfo,
+          ...prevState.personalInfo,
           [name]: reader.result,
         },
       }))
@@ -89,10 +46,11 @@ class App extends React.Component {
 
  
 
-  onChangeExperience = (e, id) => {
+  const onChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      experience: state.experience.map(experienceItem => {
+    setCv(prevState => ({
+      ...prevState,
+      experience: prevState.experience.map(experienceItem => {
         return (experienceItem.id === id) ?
           { ...experienceItem, [name]: value }
           : experienceItem;
@@ -100,20 +58,22 @@ class App extends React.Component {
     }))
   }
 
-  onChangeEducation = (e, id) => {
+  const onChangeEducation = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      education: state.education.map(educationItem => {
+    setCv(prevState => ({
+      ...prevState,
+      education: prevState.education.map(educationItem => {
         return (educationItem.id === id) ?
           { ...educationItem, [name]: value }
           : educationItem;
       }),
     }))
   }
-  onChangeSkills = (e, id) => {
+  const onChangeSkills = (e, id) => {
     const { name, value } = e.target;
-    this.setState(state => ({
-      skills: state.skills.map(skillItem => {
+    setCv(prevState => ({
+      ...prevState,
+      skills: prevState.skills.map(skillItem => {
         return (skillItem.id === id) ?
           { ...skillItem, [name]: value }
           : skillItem;
@@ -121,7 +81,7 @@ class App extends React.Component {
     }))
   }
 
-  handleAddExperience = e => {
+  const handleAddExperience = e => {
     e.preventDefault();
     const newItem = {
       id: uuidv4(),
@@ -132,12 +92,13 @@ class App extends React.Component {
       from: '',
       to: '',
     }
-    this.setState(state => ({
-      experience: [...state.experience, newItem]
-    }));
+    setCv(prevState => ({
+      ...prevState,
+      experience: [...prevState.experience, newItem]
+    }))
   }
 
-  handleAddEducation = e => {
+  const handleAddEducation = e => {
     e.preventDefault();
     const newItem = {
       id: uuidv4(),
@@ -149,83 +110,91 @@ class App extends React.Component {
       from: '',
       to: ''
     }
-    this.setState(state => ({
-      education: [...state.education, newItem]
-    }));
+    setCv(prevState => ({
+      ...prevState,
+      education: [...prevState.education, newItem]
+    }))
   }
-  handleAddSkill = (e) => {
+  const handleAddSkill = (e) => {
     e.preventDefault();
     const newSkillItem = {
       id: uuidv4(),
       skill: ''
     }
-    this.setState(state => ({
-      skills: [...state.skills, newSkillItem]
+    setCv(prevState => ({
+      ...prevState,
+      skills: [...prevState.skills, newSkillItem]
     }))
   }
 
-  handleDeleteExperience = (e, id) => {
+  const handleDeleteExperience = (e, id) => {
     e.preventDefault();
-    this.setState(state => ({
-      experience: state.experience.filter(item => item.id !== id),
+    setCv(prevState => ({
+      ...prevState,
+      experience: prevState.experience.filter(item => item.id !== id),
     }));
   }
 
-  handleDeleteEducation = (e, id) => {
+  const handleDeleteEducation = (e, id) => {
     e.preventDefault();
-    this.setState(state => ({
-      education: state.education.filter(item => item.id !== id),
+    setCv(prevState => ({
+      ...prevState,
+      education: prevState.education.filter(item => item.id !== id),
     }));
   }
 
-  handleDeleteSkill = (e, id) => {
+  const handleDeleteSkill = (e, id) => {
     e.preventDefault()
-    this.setState(state => ({
-      skills: state.skills.filter(item => item.id !== id),
+    setCv(prevState => ({
+      ...prevState,
+      skills: prevState.skills.filter(item => item.id !== id),
     }));
   }
 
-  handleLoadExample = e => {
+  const handleLoadExample = e => {
     e.preventDefault();
-    this.setState(exampleCV)
+    setCv(exampleCV)
   }
 
 
-  handleReset = e => {
+  const handleReset = e => {
     e.preventDefault();
-    this.setState(emptyCV);
+    setCv(emptyCV);
   }
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
-  render() {
+
+
     
     return (
       <main>
         <CVForm
-          personalInfo={this.state.personalInfo}
-          experience={this.state.experience}
-          education={this.state.education}
-          skills={this.state.skills}
-          handleAddExperience={this.handleAddExperience}
-          handleAddEducation={this.handleAddEducation}
-          handleAddSkill={this.handleAddSkill}
-          handleDeleteExperience={this.handleDeleteExperience}
-          handleDeleteEducation={this.handleDeleteEducation}
-          handleDeleteSkill={this.handleDeleteSkill}
-          onChangeExperience={this.onChangeExperience}
-          onChangeEducation={this.onChangeEducation}
-          onChangeSkills={this.onChangeSkills}
-          handleChangePersonal={this.handleChangePersonal}
-          handleLoadExample={this.handleLoadExample}
-          handleReset={this.handleReset}
+          personalInfo={cv.personalInfo}
+          experience={cv.experience}
+          education={cv.education}
+          skills={cv.skills}
+          handleAddExperience={handleAddExperience}
+          handleAddEducation={handleAddEducation}
+          handleAddSkill={handleAddSkill}
+          handleDeleteExperience={handleDeleteExperience}
+          handleDeleteEducation={handleDeleteEducation}
+          handleDeleteSkill={handleDeleteSkill}
+          onChangeExperience={onChangeExperience}
+          onChangeEducation={onChangeEducation}
+          onChangeSkills={onChangeSkills}
+          handleChangePersonal={handleChangePersonal}
+          handleLoadExample={handleLoadExample}
+          handleReset={handleReset}
+          onPrint={handlePrint}
         />
-        <CVPreview
-          state={this.state}
-        />
+        <CVPreview state={cv} ref={componentRef} />
       </main>
     )
   }
-}
 
 
 export default App;

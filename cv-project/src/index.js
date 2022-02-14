@@ -6,14 +6,17 @@ import { ThemeProvider } from 'styled-components';
 import Theme from './theme/Theme';
 import GlobalStyle from './theme/GlobalStyle';
 import reportWebVitals from './reportWebVitals';
+import ErrorBoundary from './components/Utils/ErrorBoundary';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={Theme}>
-      <GlobalStyle />
-      <Header />
-      <App />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider theme={Theme}>
+        <GlobalStyle />
+        <Header />
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
 
   </React.StrictMode>,
   document.getElementById('root')
