@@ -4,8 +4,13 @@ import Sidebar from "./Sidebar";
 import CVBody from "./CVBody";
 import styled from "styled-components";
 
-
-const CVPreview = ({ state }) => {
+class CVPreview extends React.Component {
+  //Class component needed to use react to print
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { state } = this.props;
     return (
       <CVPreviewContainer>
         <CVHeader personalInfo={state.personalInfo} />
@@ -22,6 +27,7 @@ const CVPreview = ({ state }) => {
         />
       </CVPreviewContainer>
     )
+  }
 }
 
 const CVPreviewContainer = styled.div`
