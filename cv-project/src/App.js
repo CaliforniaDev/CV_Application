@@ -49,6 +49,7 @@ const App = () => {
   const onChangeExperience = (e, id) => {
     const { name, value } = e.target;
     setCv(prevState => ({
+      ...prevState,
       experience: prevState.experience.map(experienceItem => {
         return (experienceItem.id === id) ?
           { ...experienceItem, [name]: value }
@@ -60,6 +61,7 @@ const App = () => {
   const onChangeEducation = (e, id) => {
     const { name, value } = e.target;
     setCv(prevState => ({
+      ...prevState,
       education: prevState.education.map(educationItem => {
         return (educationItem.id === id) ?
           { ...educationItem, [name]: value }
@@ -70,6 +72,7 @@ const App = () => {
   const onChangeSkills = (e, id) => {
     const { name, value } = e.target;
     setCv(prevState => ({
+      ...prevState,
       skills: prevState.skills.map(skillItem => {
         return (skillItem.id === id) ?
           { ...skillItem, [name]: value }
@@ -90,8 +93,9 @@ const App = () => {
       to: '',
     }
     setCv(prevState => ({
+      ...prevState,
       experience: [...prevState.experience, newItem]
-    }));
+    }))
   }
 
   const handleAddEducation = e => {
@@ -107,8 +111,9 @@ const App = () => {
       to: ''
     }
     setCv(prevState => ({
+      ...prevState,
       education: [...prevState.education, newItem]
-    }));
+    }))
   }
   const handleAddSkill = (e) => {
     e.preventDefault();
@@ -117,6 +122,7 @@ const App = () => {
       skill: ''
     }
     setCv(prevState => ({
+      ...prevState,
       skills: [...prevState.skills, newSkillItem]
     }))
   }
@@ -124,6 +130,7 @@ const App = () => {
   const handleDeleteExperience = (e, id) => {
     e.preventDefault();
     setCv(prevState => ({
+      ...prevState,
       experience: prevState.experience.filter(item => item.id !== id),
     }));
   }
@@ -131,6 +138,7 @@ const App = () => {
   const handleDeleteEducation = (e, id) => {
     e.preventDefault();
     setCv(prevState => ({
+      ...prevState,
       education: prevState.education.filter(item => item.id !== id),
     }));
   }
@@ -138,6 +146,7 @@ const App = () => {
   const handleDeleteSkill = (e, id) => {
     e.preventDefault()
     setCv(prevState => ({
+      ...prevState,
       skills: prevState.skills.filter(item => item.id !== id),
     }));
   }
